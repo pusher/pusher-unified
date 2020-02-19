@@ -14,7 +14,9 @@ To run the project run:
 
 A component is a piece of our UI, a button for example.
 It uses partials as components in a similar fashion to [GOV.UK](https://github.com/alphagov/govuk_publishing_components/blob/master/app/views/govuk_publishing_components/components/_input.html.erb)
+[See all components](/app/views/application)
 
 ## CSS
 
 This project uses atomic CSS classes (each class, on the whole, represents one css property declaration). The system is based on https://github.com/tachyons-css/tachyons-custom. The CSS is generated with PostCSS via Webpack.
+[See all css](/app/javascript/css)
