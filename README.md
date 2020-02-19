@@ -23,4 +23,4 @@ Although recently [found out](https://twitter.com/tvararu/status/122831464398845
 
 This project uses atomic CSS classes (each class, on the whole, represents one css property declaration). The system is based on https://github.com/tachyons-css/tachyons-custom. The CSS is generated with PostCSS via Webpack.
 
-[See all css](/app/javascript/css)
+[See all CSS](/app/javascript/css)
