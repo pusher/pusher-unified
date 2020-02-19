@@ -1,6 +1,6 @@
 # Pusher unified
 
-This rails project is simply a model of a modern rails app demoing how I [Jon Heslop](https://www.github.com/jonheslop/) aspire us to build out the frontend of [pusher/dash](https://github.com/pusher/dash) as we modernise it.
+This rails project is simply a model of a modern rails app demoing how I [Jon Heslop](https://www.github.com/jonheslop/) aspire us to build out the frontend of https://github.com/pusher/dash as we modernise it.
 
 The project has live reloading of all changes.
 
