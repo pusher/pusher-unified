@@ -1,0 +1,51 @@
+<%
+  value ||= nil
+  name ||= nil
+  id ||= name
+  label ||= nil
+  type ||= "text"
+  placeholder ||= nil
+  autofocus ||= nil
+  required ||= false
+  readonly ||= false
+  containerClasses ||= nil
+  labelClasses ||= nil
+  inputClasses ||= nil
+  error ||= nil
+  errorID = "error-#{SecureRandom.hex(4)}"
+  hasError ||= !error.nil?
+
+  allInputClasses = %w(sans-serif black f7 input-reset br2 ba b--silver hover-b--slate focus-b--starflower focus-bs-starflower pa3 lh-solid w-100)
+  allInputClasses << inputClasses unless inputClasses.nil?
+  allInputClasses << %w(b--radish focus-b--radish hover-b--radish focus-bs-radish error) if hasError
+
+  ariaDescribedBy ||= ""
+  ariaDescribedBy << errorID if hasError 
+%>
+
+<div class="<%= containerClasses %>">
+  <%= render partial: "input-label", locals: {
+    htmlFor: id,
+    label: label,
+    classes: labelClasses
+  } %>
+  <% if hasError %>
+    <%= render partial: "input-error-label", locals: {
+      id: errorID,
+      label: error
+    } %>
+  <% end %>
+  <%= tag.input name: name,
+    id: id,
+    type: type,
+    value: value,
+    autofocus: autofocus,
+    readonly: readonly,
+    required: required,
+    class: allInputClasses,
+    placeholder: placeholder,
+    aria: {
+      describedby: ariaDescribedBy,
+    }
+  %>
+</div>

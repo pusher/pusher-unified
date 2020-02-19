@@ -1,0 +1,37 @@
+.checkbox {
+  &-label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    
+    &::before {
+      display: block;
+      content: " ";
+      position: relative;
+      width: var(--spacing-large);
+      height: var(--spacing-large);
+      border: 1px solid var(--silver);
+      border-radius: var(--border-radius-2);
+      margin-right: var(--spacing-extra-small);
+    }
+    
+    &:hover::before {
+      border-color: var(--slate);
+    }
+  }
+  
+  &:checked + &-label:before {
+    background-color: var(--steel);
+    border-color: var(--steel);
+    background-image: url("/assets/checkmark.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 16px;
+  }
+
+  &:focus + &-label:before {
+    border-color: var(--starflower);
+    box-shadow: inset 0 0 0 1px var(--starflower);
+  }
+}

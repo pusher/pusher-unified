@@ -1,0 +1,17 @@
+.divider {
+  position: relative;
+
+  & > * {
+    position: relative;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: 50%;
+    width: 100%;
+    display: block;
+    border-top: 1px solid var(--smoke);
+  }
+}

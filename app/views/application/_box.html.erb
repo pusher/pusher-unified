@@ -1,0 +1,11 @@
+<%
+  classes ||= nil
+
+  # Trailing space in string below important
+  allClasses = "br2 ba b--smoke pa5 "
+  allClasses << classes unless classes.nil?
+%>
+
+<div class="<%= allClasses%>">
+  <%= yield %>
+</div>

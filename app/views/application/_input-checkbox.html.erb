@@ -1,0 +1,47 @@
+<%
+  value ||= nil
+  name ||= nil
+  id ||= name
+  label ||= nil
+  type ||= "text"
+  placeholder ||= nil
+  autofocus ||= nil
+  required ||= false
+  readonly ||= false
+  containerClasses ||= nil
+  labelClasses ||= nil
+  inputClasses ||= nil
+  error ||= nil
+  errorID = "error-#{SecureRandom.hex(4)}"
+  hasError ||= !error.nil?
+
+  allInputClasses = %w(checkbox clip)
+  allInputClasses << inputClasses unless inputClasses.nil?
+  allInputClasses << %w(b--radish focus-b--radish hover-b--radish focus-bs-radish error) if hasError
+  
+  allLabelClasses = %w(checkbox-label)
+  allLabelClasses << labelClasses unless labelClasses.nil?
+  
+  ariaDescribedBy ||= ""
+  ariaDescribedBy << errorID if hasError 
+%>
+
+<div class="<%= containerClasses %>">
+  <%= tag.input name: name,
+    id: id,
+    type: "checkbox",
+    value: value,
+    class: allInputClasses
+  %>
+  <%= render partial: "input-label", locals: {
+    htmlFor: id,
+    label: label,
+    classes: allLabelClasses
+  } %>
+  <% if hasError %>
+    <%= render partial: "input-error-label", locals: {
+      id: errorID,
+      label: error
+    } %>
+  <% end %>
+</div>

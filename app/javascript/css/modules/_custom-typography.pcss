@@ -1,0 +1,70 @@
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: maison-neue, -apple-system, BlinkMacSystemFont, -system-ui,
+    "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto, noto,
+    "segoe ui", arial, sans-serif;
+  font-weight: 500;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased; /* WebKit  */
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--black);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 600;
+  margin: 0;
+}
+
+.heading-level-1 {
+  font-size: var(--font-size-4);
+  margin-bottom: var(--spacing-medium);
+
+  @media (--breakpoint-large) {
+    font-size: var(--font-size-3);
+    line-height: 1.2;
+  }
+}
+
+.heading-level-2 {
+  font-size: var(--font-size-5);
+  line-height: 1.538461538;
+  margin-bottom: calc(var(--spacing-medium) + var(--spacing-small));
+
+  @media (--breakpoint-large) {
+    font-size: var(--font-size-4);
+    line-height: 1.35;
+  }
+}
+
+.heading-level-3 {
+  font-size: var(--font-size-6);
+  line-height: 1.5;
+  margin-bottom: var(--spacing-small);
+
+  @media (--breakpoint-large) {
+    font-size: var(--font-size-5);
+    line-height: 1.5;
+  }
+}
+
+p {
+  font-size: var(--font-size-7);
+  margin: 0;
+  font-weight: 500;
+  line-height: 1.5;
+
+  & + p {
+    margin-top: 2rem;
+  }
+}
+
+@media (--breakpoint-large) {
+  p {
+    font-size: var(--font-size-6);
+  }
+}

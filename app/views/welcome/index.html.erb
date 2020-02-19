@@ -1,0 +1,230 @@
+<div class="pa6">
+  <h1 class="f1 mv7">Pusher design system</h1>
+
+  <h2 class="mt6 heading-level-2 slate">Typography</h3>
+
+  <div class="flex items-center">
+    <code class="dragonfruit w5 mr3">.f1</code>
+    <h1 class="f1">The quick brown fox jumps over the lazy&nbsp;dog</h1>
+  </div>
+
+  <div class="flex items-center">
+    <code class="dragonfruit w5 mr3">.f2</code>
+    <h2 class="f2">The quick brown fox jumps over the lazy&nbsp;dog</h2>
+  </div>
+
+  <div class="flex items-center">
+    <code class="dragonfruit w5 mr3">.f3</code>
+    <h3 class="f3">The quick brown fox jumps over the lazy&nbsp;dog</h3>
+  </div>
+
+  <div class="flex items-center">
+    <code class="dragonfruit w5 mr3">.f4</code>
+    <h4 class="f4">The quick brown fox jumps over the lazy&nbsp;dog</h4>
+  </div>
+
+  <div class="flex items-center">
+    <code class="dragonfruit w5 mr3">.f5</code>
+    <h5 class="f5">The quick brown fox jumps over the lazy&nbsp;dog</h5>
+  </div>
+
+  <div class="flex items-center mb7">
+    <code class="dragonfruit w5 mr3">.f6</code>
+    <h5 class="f6">The quick brown fox jumps over the lazy&nbsp;dog</h5>
+  </div>
+
+  <div class="flex items-top">
+    <code class="dragonfruit w5 mr3">.heading-level-1</code>
+    <h1 class="heading-level-1">The quick brown fox jumps over the lazy&nbsp;dog</h1>
+  </div>
+
+  <div class="flex items-top">
+    <code class="dragonfruit w5 mr3">.heading-level-2</code>
+    <h2 class="heading-level-2">The quick brown fox jumps over the lazy&nbsp;dog</h2>
+  </div>
+
+  <div class="flex items-top">
+    <code class="dragonfruit w5 mr3">.heading-level-3</code>
+    <h3 class="heading-level-3">The quick brown fox jumps over the lazy&nbsp;dog</h3>
+  </div>
+
+  <div class="flex mb5">
+    <code class="dragonfruit w5 mr3">p</code>
+    <div>
+      <p class="measure"> Maison Neue is the completely reworked version of our original Maison typeface family. While the earlier version was constructed using rigid elements, Maison Neue has been meticulously redrawn to be less formulaic and have a stronger focus on optical criteria to create a distinct grotesque paying greater attention to harmony, rhythm and flow.</p>
+      <p class="measure">In 2017, Maison Neue was further developed and expanded into a super family of 40 styles. This includes the subtly condensed original version, an extended counterpart, a mono-spaced alignment—all featuring additional weights within each family.</p>
+    </div>
+  </div>
+</div>
+
+<div class="g2x-ns gg2-m gg4-l pa5-m pa7-l mw9 center">
+  <%= render "box" do %>
+    <%= image_tag("pusher-logo.svg", alt: "Pusher", class: "ma5") %>
+    <h1 class="heading-level-1 ph5">Trusted by great companies to
+  power their realtime&nbsp;experiences</h1>
+    <div class="pa5 mv6 bg-snow br2 g2x gg3">
+      <div class="fw7 f4 tc">logo</div>
+      <div class="fw7 f4 tc">logo</div>
+      <div class="fw7 f4 tc">logo</div>
+      <div class="fw7 f4 tc">logo</div>
+    </div>
+    <%= render "blockquote",
+      text: "We deal with students’ data, which comes with serious privacy requirements. We wouldn’t be able to do what we do without Pusher.",
+      citeName: "Nick Tyler",
+      citeRole: "Director of Engineering, GoGuardian"
+    %>
+  <% end %>
+  <div class="flex flex-column justify-between">
+    <%= render "box" do %>
+      <%= render "button",
+        children: "Continue with GitHub",
+        color: "black",
+        classes: "w-100"
+      %>
+      <%= render "button",
+        children: "Continue with Google",
+        color: "starflower",
+        classes: "w-100 mt5"
+      %>
+
+      <%= render "divider-pill", text: "or use email" %>
+  
+      <%= form_with do %>
+        <%= render "input-text",
+          containerClasses: "mb4",
+          label: "Email address",
+          type: "email",
+          name: "email",
+          id: "email",
+          placeholder: "hermione@hogwarts.ac.uk",
+          required: true,
+          error: "This field is required"
+        %>
+        <%= render "input-text",
+          containerClasses: "mb4",
+          label: "Password",
+          type: "password",
+          name: "password",
+          placeholder: "••••••••••••••••"
+        %>
+
+        <%= render "input-checkbox",
+          containerClasses: "mb4",
+          label: "Remember me",
+          name: "remember"
+        %>
+        <div class="mt5">
+          <%= render "button",
+            children: "Sign up"
+          %>
+        </div>
+      <% end %>
+    <% end %>
+
+    <p class="pa5 slate">By signing up, you’re agreeing to the <a class="link underline black" href="#">Pusher terms of service</a>. View our <a class="link underline black" href="#">Privacy policy</a>.</p>
+
+    <%= render "box" do %>
+      <p class="slate">Already registered? <a class="link underline black" href="#">Sign into existing account</a>.</p>
+    <% end %>
+  </div>
+</div>
+
+<div class="pa6">
+  <h2 class="mt6 heading-level-2 slate">Palette</h2>
+
+  <div class="g4x gg3 mb6">
+    <div>
+      <div class="h4 white fw7 br3 bg-black">
+        <code class="dib pa3 f6">--black</code>
+      </div>
+    </div>
+    <div>
+      <div class="h4 white fw7 br3 bg-steel">
+        <code class="dib pa3 f6">--steel</code>
+      </div>
+    </div>
+    <div>
+      <div class="h4 white fw7 br3 bg-slate">
+        <code class="dib pa3 f6">--slate</code>
+      </div>
+    </div>
+    <div>
+      <div class="h4 white fw7 br3 bg-silver">
+        <code class="dib pa3 f6">--silver</code>
+      </div>
+    </div>
+  </div>
+
+  <div class="g4x gg3 mb6">
+    <div>
+      <% ['-light', '', '-dark'].each_with_index do |variant, index| %>
+        <div class="<%= variant == '' ? 'h4' : 'h3' %> white fw7 bg-dragonfruit<%= variant %> <% if index == 0 %>br3 br--top<% end %> <% if index == 2 %>br3 br--bottom<% end %>">
+          <code class="dib pa3 f6">--dragonfruit<%= variant %></code>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="g4x gg3 mb6">
+    <div>
+      <% ['-light', '', '-dark', '-wash'].each_with_index do |variant, index| %>
+        <div class="<%= variant == '' ? 'h4' : 'h3' %> white fw7 bg-starflower<%= variant %> <% if index == 0 %>br3 br--top<% end %> <% if index == 3 %>br3 br--bottom<% end %>">
+          <code class="dib pa3 f6">--starflower<%= variant %></code>
+        </div>
+      <% end %>
+    </div>
+    <div>
+      <% ['-light', '', '-dark', '-wash'].each_with_index do |variant, index| %>
+        <div class="<%= variant == '' ? 'h4' : 'h3' %> white fw7 bg-kale<%= variant %> <% if index == 0 %>br3 br--top<% end %> <% if index == 3 %>br3 br--bottom<% end %>">
+          <code class="dib pa3 f6">--kale<%= variant %></code>
+        </div>
+      <% end %>
+    </div>
+    <div>
+      <% ['-light', '', '-dark', '-wash'].each_with_index do |variant, index| %>
+        <div class="<%= variant == '' ? 'h4' : 'h3' %> white fw7 bg-pumpkin<%= variant %> <% if index == 0 %>br3 br--top<% end %> <% if index == 3 %>br3 br--bottom<% end %>">
+          <code class="dib pa3 f6">--pumpkin<%= variant %></code>
+        </div>
+      <% end %>
+    </div>
+    <div>
+      <% ['-light', '', '-dark', '-wash'].each_with_index do |variant, index| %>
+        <div class="<%= variant == '' ? 'h4' : 'h3' %> white fw7 bg-radish<%= variant %> <% if index == 0 %>br3 br--top<% end %> <% if index == 3 %>br3 br--bottom<% end %>">
+          <code class="dib pa3 f6">--radish<%= variant %></code>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="g4x gg3 mb6">
+    <div>
+      <div class="h4 white fw7 bg-smoke br3 br--top">
+        <code class="dib pa3 f6">--smoke</code>
+      </div>
+      <div class="h3 white fw7 bg-smoke-dark">
+        <code class="dib pa3 f6">--smoke-dark</code>
+      </div>
+      <div class="h3 white fw7 bg-smoke-darker br3 br--bottom">
+        <code class="dib pa3 f6">--smoke-darker</code>
+      </div>
+    </div>
+    <div>
+      <div class="h4 white fw7 bg-snow br3 br--top">
+        <code class="dib pa3 f6">--snow</code>
+      </div>
+      <div class="h3 white fw7 bg-snow-dark">
+        <code class="dib pa3 f6">--snow-dark</code>
+      </div>
+      <div class="h3 white fw7 bg-snow-darker br3 br--bottom">
+        <code class="dib pa3 f6">--snow-darker</code>
+      </div>
+    </div>
+  </div>
+
+  <div class="g4x gg3 mb6">
+    <div>
+      <div class="h4 white fw7 bg-eggplant br3">
+        <code class="dib pa3 f6">--eggplant</code>
+      </div>
+    </div>
+  </div>
+</div>
