@@ -9,11 +9,11 @@
 @custom-media --breakpoint-large screen and (min-width: 60em);
 
 :root {
-  --sans-serif: maison-neue, -apple-system, BlinkMacSystemFont, -system-ui,
+  --sans-serif: "Maison Neue", -apple-system, BlinkMacSystemFont, -system-ui,
     "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto, noto,
     "segoe ui", arial, sans-serif;
   --serif: athelas, serif;
-  --monospace: maison-neue-mono, "SFMono-Regular", monospace;
+  --monospace: "Maison Neue Mono", "SFMono-Regular", monospace;
 
   --font-size-headline: 8rem; /* 128px */
   --font-size-subheadline: 6rem; /* 96px */
