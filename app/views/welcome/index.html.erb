@@ -74,16 +74,12 @@
   <% end %>
   <div class="flex flex-column justify-between">
     <%= render(BoxComponent.new()) do %>
-      <%= render "button",
-        children: "Continue with GitHub",
-        color: "black",
-        classes: "w-100"
-      %>
-      <%= render "button",
-        children: "Continue with Google",
-        color: "starflower",
-        classes: "w-100 mt5"
-      %>
+      <%= render(ButtonComponent.new(type: "submit", icon: "github", color: "black", classes: "w-100")) do %>
+        Continue with GitHub
+      <% end %>
+      <%= render(ButtonComponent.new(type: "submit", icon: "google", color: "starflower", classes: "w-100 mt5")) do %>
+        Continue with Google
+      <% end %>
 
       <%= render "divider-pill", text: "or use email" %>
   
@@ -112,9 +108,9 @@
           name: "remember"
         %>
         <div class="mt5">
-          <%= render "button",
-            children: "Sign up"
-          %>
+          <%= render(ButtonComponent.new(color: "dragonfruit", type: 'submit')) do %>
+            Sign up
+          <% end %>
         </div>
       <% end %>
     <% end %>
