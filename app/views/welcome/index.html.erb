@@ -58,7 +58,7 @@
 </div>
 
 <div class="g2x-ns gg2-m gg4-l pa5-m pa7-l mw9 center">
-  <%= render "box" do %>
+  <%= render(BoxComponent.new()) do %>
     <%= image_tag("pusher-logo.svg", alt: "Pusher", class: "ma5") %>
     <h1 class="heading-level-1 ph5">Trusted by great companies to
   power their realtime&nbsp;experiences</h1>
@@ -68,14 +68,12 @@
       <div class="fw7 f4 tc">logo</div>
       <div class="fw7 f4 tc">logo</div>
     </div>
-    <%= render "blockquote",
-      text: "We deal with students’ data, which comes with serious privacy requirements. We wouldn’t be able to do what we do without Pusher.",
-      citeName: "Nick Tyler",
-      citeRole: "Director of Engineering, GoGuardian"
-    %>
+    <%= render(BlockquoteComponent.new(cite_name: "Nick Tyler", cite_role: "Director of Engineering, GoGuardian")) do %>
+      “We deal with students’ data, which comes with serious privacy requirements. We wouldn’t be able to do what we do without Pusher.”
+    <% end %>
   <% end %>
   <div class="flex flex-column justify-between">
-    <%= render "box" do %>
+    <%= render(BoxComponent.new()) do %>
       <%= render "button",
         children: "Continue with GitHub",
         color: "black",
@@ -123,7 +121,7 @@
 
     <p class="pa5 slate">By signing up, you’re agreeing to the <a class="link underline black" href="#">Pusher terms of service</a>. View our <a class="link underline black" href="#">Privacy policy</a>.</p>
 
-    <%= render "box" do %>
+    <%= render(BoxComponent.new()) do %>
       <p class="slate">Already registered? <a class="link underline black" href="#">Sign into existing account</a>.</p>
     <% end %>
   </div>
