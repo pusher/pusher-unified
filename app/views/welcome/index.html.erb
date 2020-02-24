@@ -81,7 +81,7 @@
         Continue with Google
       <% end %>
 
-      <%= render "divider-pill", text: "or use email" %>
+      <%= render(DividerPillComponent.new(text: "or use email")) %>
   
       <%= form_with do %>
         <%= render "input-text",
