@@ -1,0 +1,19 @@
+<div class="<%= @container_classes %>">
+  <%= render(InputLabelComponent.new(label: @label, html_for: @id, classes: @label_classes)) %>
+  <% if @has_error %>
+    <%= render(InputErrorLabelComponent.new(label: @error, id: @errorID)) %>
+  <% end %>
+  <%= tag.input name: @name,
+    id: @id,
+    type: @type,
+    value: @value,
+    autofocus: @autofocus,
+    readonly: @readonly,
+    required: @required,
+    class: @classes,
+    placeholder: @placeholder,
+    aria: {
+      describedby: @aria_described_by,
+    }
+  %>
+</div>
