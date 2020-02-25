@@ -33,15 +33,8 @@
     value: value,
     class: allInputClasses
   %>
-  <%= render partial: "input-label", locals: {
-    htmlFor: id,
-    label: label,
-    classes: allLabelClasses
-  } %>
+  <%= render(InputLabelComponent.new(label: label, html_for: id, classes: allLabelClasses)) %>
   <% if hasError %>
-    <%= render partial: "input-error-label", locals: {
-      id: errorID,
-      label: error
-    } %>
+    <%= render(InputErrorLabelComponent.new(label: error, id: errorID)) %>
   <% end %>
 </div>
