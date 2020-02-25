@@ -84,7 +84,7 @@
       <%= render(DividerPillComponent.new(text: "or use email")) %>
   
       <%= form_with do %>
-      <%= render(InputTextComponent.new(
+        <%= render(InputTextComponent.new(
           container_classes: "mb4",
           label: "Email address",
           type: "email",
@@ -93,19 +93,19 @@
           placeholder: "your.name@email.com",
           required: true,
           error: "This field is required"
-      )) %>
-      <%= render(InputTextComponent.new(
+        )) %>
+        <%= render(InputTextComponent.new(
           container_classes: "mb4",
           label: "Password",
           type: "password",
           id: "password",
           placeholder: "••••••••••••••••"
-      )) %>
-        <%= render "input-checkbox",
-          containerClasses: "mb4",
+        )) %>
+        <%= render(InputCheckboxComponent.new(
+          container_classes: "mb4",
           label: "Remember me",
-          name: "remember"
-        %>
+          id: "remember"
+        )) %>
         <div class="mt5">
           <%= render(ButtonComponent.new(color: "dragonfruit", type: 'submit')) do %>
             Sign up

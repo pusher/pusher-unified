@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     cursor: pointer;
-    
+
     &::before {
       display: block;
       content: " ";
@@ -15,12 +15,16 @@
       border-radius: var(--border-radius-2);
       margin-right: var(--spacing-extra-small);
     }
-    
+
     &:hover::before {
       border-color: var(--slate);
     }
+
+    &.error::before {
+      border-color: var(--radish);
+    }
   }
-  
+
   &:checked + &-label:before {
     background-color: var(--steel);
     border-color: var(--steel);
