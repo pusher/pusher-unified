@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # A sample Guardfile
 # More info at https://github.com/guard/guard#readme
 
@@ -26,11 +28,12 @@ guard 'livereload', notify: true do
     png: :png,
     gif: :gif,
     jpg: :jpg,
-    jpeg: :jpeg,
+    jpeg: :jpeg
     # less: :less, # uncomment if you want LESS stylesheets done in browser
   }
 
-  rails_view_exts = %w(html html.erb erb haml slim)
+  rails_view_exts = %w[html html.erb erb haml slim]
+  rails_components_exts = %w[html html.erb rb]
 
   # file types LiveReload may optimize refresh for
   compiled_exts = extensions.values.uniq
@@ -51,5 +54,6 @@ guard 'livereload', notify: true do
   # file needing a full reload of the page anyway
   watch(%r{app/views/.+\.(#{rails_view_exts * '|'})$})
   watch(%r{app/helpers/.+\.rb})
+  watch(%r{app/components/.+\.(#{rails_components_exts * '|'})$})
   watch(%r{config/locales/.+\.yml})
 end
