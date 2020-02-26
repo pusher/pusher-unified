@@ -57,71 +57,6 @@
   </div>
 </div>
 
-<div class="g2x-ns gg2-m gg4-l pa5-m pa7-l mw9 center">
-  <%= render(BoxComponent.new()) do %>
-    <%= image_tag("pusher-logo.svg", alt: "Pusher", class: "ma5") %>
-    <h1 class="heading-level-1 ph5">Trusted by great companies to
-  power their realtime&nbsp;experiences</h1>
-    <div class="pa5 mv6 bg-snow br2 g2x gg3">
-      <div class="fw7 f4 tc">logo</div>
-      <div class="fw7 f4 tc">logo</div>
-      <div class="fw7 f4 tc">logo</div>
-      <div class="fw7 f4 tc">logo</div>
-    </div>
-    <%= render(BlockquoteComponent.new(cite_name: "Nick Tyler", cite_role: "Director of Engineering, GoGuardian")) do %>
-      “We deal with students’ data, which comes with serious privacy requirements. We wouldn’t be able to do what we do without Pusher.”
-    <% end %>
-  <% end %>
-  <div class="flex flex-column justify-between">
-    <%= render(BoxComponent.new()) do %>
-      <%= render(ButtonComponent.new(type: "submit", icon: "github", color: "black", classes: "w-100")) do %>
-        Continue with GitHub
-      <% end %>
-      <%= render(ButtonComponent.new(type: "submit", icon: "google", color: "starflower", classes: "w-100 mt5")) do %>
-        Continue with Google
-      <% end %>
-
-      <%= render(DividerPillComponent.new(text: "or use email")) %>
-  
-      <%= form_with do %>
-        <%= render(InputTextComponent.new(
-          container_classes: "mb4",
-          label: "Email address",
-          type: "email",
-          name: "email",
-          id: "email",
-          placeholder: "your.name@email.com",
-          required: true,
-          error: "This field is required"
-        )) %>
-        <%= render(InputTextComponent.new(
-          container_classes: "mb4",
-          label: "Password",
-          type: "password",
-          id: "password",
-          placeholder: "••••••••••••••••"
-        )) %>
-        <%= render(InputCheckboxComponent.new(
-          container_classes: "mb4",
-          label: "Remember me",
-          id: "remember"
-        )) %>
-        <div class="mt5">
-          <%= render(ButtonComponent.new(color: "dragonfruit", type: 'submit')) do %>
-            Sign up
-          <% end %>
-        </div>
-      <% end %>
-    <% end %>
-
-    <p class="pa5 slate">By signing up, you’re agreeing to the <a class="link underline black" href="#">Pusher terms of service</a>. View our <a class="link underline black" href="#">Privacy policy</a>.</p>
-
-    <%= render(BoxComponent.new()) do %>
-      <p class="slate">Already registered? <a class="link underline black" href="#">Sign into existing account</a>.</p>
-    <% end %>
-  </div>
-</div>
-
 <div class="pa6">
   <h2 class="mt6 heading-level-2 slate">Palette</h2>
 
@@ -219,5 +154,73 @@
         <code class="dib pa3 f6">--eggplant</code>
       </div>
     </div>
+  </div>
+</div>
+
+<div class="ph6">
+  <h2 class="mt6 heading-level-2 slate">Sign up</h2>
+</div>
+<div class="g2x-ns gg2-m gg4-l pa5-m pa7-l mw9 center">
+  <%= render(BoxComponent.new()) do %>
+    <%= image_tag("pusher-logo.svg", alt: "Pusher", class: "ma5") %>
+    <h1 class="heading-level-1 ph5">Trusted by great companies to
+  power their realtime&nbsp;experiences</h1>
+    <div class="pa5 mv6 bg-snow br2 g2x gg3">
+      <div class="fw7 f4 tc">logo</div>
+      <div class="fw7 f4 tc">logo</div>
+      <div class="fw7 f4 tc">logo</div>
+      <div class="fw7 f4 tc">logo</div>
+    </div>
+    <%= render(BlockquoteComponent.new(cite_name: "Nick Tyler", cite_role: "Director of Engineering, GoGuardian")) do %>
+      “We deal with students’ data, which comes with serious privacy requirements. We wouldn’t be able to do what we do without Pusher.”
+    <% end %>
+  <% end %>
+  <div class="flex flex-column justify-between">
+    <%= render(BoxComponent.new()) do %>
+      <%= render(ButtonComponent.new(type: "submit", icon: "github", color: "black", classes: "w-100")) do %>
+        Continue with GitHub
+      <% end %>
+      <%= render(ButtonComponent.new(type: "submit", icon: "google", color: "starflower", classes: "w-100 mt5")) do %>
+        Continue with Google
+      <% end %>
+
+      <%= render(DividerPillComponent.new(text: "or use email")) %>
+  
+      <%= form_with do %>
+        <%= render(InputTextComponent.new(
+          container_classes: "mb4",
+          label: "Email address",
+          type: "email",
+          name: "email",
+          id: "email",
+          placeholder: "your.name@email.com",
+          required: true,
+          error: "This field is required"
+        )) %>
+        <%= render(InputTextComponent.new(
+          container_classes: "mb4",
+          label: "Password",
+          type: "password",
+          id: "password",
+          placeholder: "••••••••••••••••"
+        )) %>
+        <%= render(InputCheckboxComponent.new(
+          container_classes: "mb4",
+          label: "Remember me",
+          id: "remember"
+        )) %>
+        <div class="mt5">
+          <%= render(ButtonComponent.new(color: "dragonfruit", type: 'submit')) do %>
+            Sign up
+          <% end %>
+        </div>
+      <% end %>
+    <% end %>
+
+    <p class="pa5 slate">By signing up, you’re agreeing to the <a class="link underline black" href="#">Pusher terms of service</a>. View our <a class="link underline black" href="#">Privacy policy</a>.</p>
+
+    <%= render(BoxComponent.new()) do %>
+      <p class="slate">Already registered? <a class="link underline black" href="#">Sign into existing account</a>.</p>
+    <% end %>
   </div>
 </div>
