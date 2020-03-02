@@ -1,12 +1,13 @@
 name: send-css-to-s3
 
-on: [push]
+on:
+  push:
+    branches:
+    - master
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@master
       - uses: actions/setup-ruby@v1
