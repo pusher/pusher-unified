@@ -194,15 +194,15 @@
           name: "email",
           id: "email",
           placeholder: "your.name@email.com",
-          required: true,
-          error: "This field is required"
+          required: true
         )) %>
         <%= render(InputTextComponent.new(
           container_classes: "mb4",
           label: "Password",
           type: "password",
           id: "password",
-          placeholder: "••••••••••••••••"
+          placeholder: "••••••••••••••••",
+          error: "Password must be at least 8 characters"
         )) %>
         <%= render(InputCheckboxComponent.new(
           container_classes: "mb4",

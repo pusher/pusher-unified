@@ -1,34 +1,38 @@
-# frozen_string_literal: false
+# frozen_string_literal: true
 
 class InputTextComponent < ActionView::Component::Base
-  def initialize(id:,
-                 type: 'text',
-                 name: id,
-                 value: '',
-                 label: nil,
-                 placeholder: nil,
-                 autofocus: nil,
-                 required: false,
-                 readonly: false,
-                 container_classes: nil,
-                 label_classes: nil,
-                 input_classes: nil,
-                 error: nil,
-                 error_id: "error-#{SecureRandom.hex(4)}",
-                 has_error: !error.nil?)
-    all_input_classes = %w[sans-serif
-                           black
-                           f7
-                           input-reset
-                           br2
-                           ba
-                           b--silver
-                           hover-b--slate
-                           focus-b--starflower
-                           focus-bs-starflower
-                           pa3
-                           lh-solid
-                           w-100]
+  def initialize(
+    id:,
+    type: 'text',
+    name: id,
+    value: '',
+    label: nil,
+    placeholder: nil,
+    autofocus: nil,
+    required: false,
+    readonly: false,
+    container_classes: nil,
+    label_classes: nil,
+    input_classes: nil,
+    error: nil,
+    error_id: "error-#{SecureRandom.hex(4)}",
+    has_error: !error.nil?
+  )
+
+    base_input_classes = %w[sans-serif
+                            black
+                            f7
+                            input-reset
+                            br2
+                            ba
+                            b--silver
+                            hover-b--slate
+                            focus-b--starflower
+                            focus-bs-starflower
+                            pa3
+                            lh-solid
+                            w-100]
+    all_input_classes = base_input_classes.dup
     all_input_classes << input_classes unless input_classes.nil?
     if has_error
       all_input_classes << %w[b--radish
@@ -38,8 +42,7 @@ class InputTextComponent < ActionView::Component::Base
                               error]
     end
 
-    aria_described_by ||= ''
-    aria_described_by << error_id if has_error
+    aria_described_by = error_id if has_error
 
     @id = id
     @name = name
