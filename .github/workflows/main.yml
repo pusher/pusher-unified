@@ -10,13 +10,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - uses: actions/setup-ruby@v1
-        with:
-          ruby-version: '2.x'
       - uses: actions/setup-node@v1
         with:
           node-version: '10.x'
-      - name: Install dependencies
+      - name: Set up Ruby 2.7
+        uses: eregon/use-ruby-action@master
+        with:
+          ruby-version: 2.7
+      - name: Bundle
         run: |
           gem install bundler
           bundle install --jobs 4 --retry 3
