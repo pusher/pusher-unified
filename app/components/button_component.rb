@@ -9,9 +9,10 @@ class ButtonComponent < ActionView::Component::Base
     type: 'button',
     classes: '',
     size: 'large',
-    icon: nil
+    icon: nil,
+    style: 'fill'
   )
-    base_classes = %W[sans-serif
+    fill_classes = %W[sans-serif
                       f7
                       fw6
                       white
@@ -28,6 +29,24 @@ class ButtonComponent < ActionView::Component::Base
                       focus-b--#{color}-light
                       hover-b--#{color}-light
                       active-b--#{color}-dark]
+    outline_classes = %w[sans-serif
+                         f7
+                         fw5
+                         black
+                         tc
+                         nowrap
+                         bg-white
+                         hover-bg-snow
+                         focus-bg-snow
+                         active-bg-snow-dark
+                         ba
+                         br2
+                         b--smoke
+                         focus-b--starflower-light
+                         hover-b--smoke-light
+                         active-b--smoke-dark]
+
+    base_classes = style == 'fill' ? fill_classes : outline_classes
     all_classes = base_classes
     all_classes << %w[pv2 ph4] if size == 'large'
     all_classes << %w[pv1 ph3] if size == 'small'
