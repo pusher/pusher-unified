@@ -5,23 +5,23 @@
     <nav>
       <ul class="list pa0 ma0">
         <li class="dib mh4">
-          <%= render(ButtonComponent.new(style: "outline")) do %>
+          <%= render(ButtonComponent.new(style: "outline", size: 'small')) do %>
             Feedback
           <% end %>
         </li>
         <li class="dib mh4">
-          <a href="#" class="db link black">
-            <%= render(IconComponent.new(name: "help-circle", title: "Support")) %>
-          </a>
-        </li>
-        <li class="dib mh4">  
-          <a href="#" class="db link black">
-            <%= render(IconComponent.new(name: "book-open", title: "Docs")) %>
+          <a href="#" class="db link black fw6">
+            Support
           </a>
         </li>
         <li class="dib mh4">
-          <a href="#" class="db link black">
-            <%= render(IconComponent.new(name: "user", title: "Account")) %>
+          <a href="#" class="db link black fw6">
+           Docs
+          </a>
+        </li>
+        <li class="dib mh4">
+          <a href="#" class="db link black fw6">
+            Account
           </a>
         </li>
       </ul>
