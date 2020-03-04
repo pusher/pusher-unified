@@ -31,9 +31,10 @@ class ButtonComponent < ActionView::Component::Base
                       active-b--#{color}-dark]
     outline_classes = %w[sans-serif
                          f7
-                         fw5
+                         fw6
                          black
                          tc
+                         h2
                          nowrap
                          bg-white
                          hover-bg-snow
@@ -49,7 +50,7 @@ class ButtonComponent < ActionView::Component::Base
     base_classes = style == 'fill' ? fill_classes : outline_classes
     all_classes = base_classes
     all_classes << %w[pv2 ph4] if size == 'large'
-    all_classes << %w[pv1 ph3] if size == 'small'
+    all_classes << %w[pv1 ph2] if size == 'small'
     all_classes << %w[flex items-center justify-center] unless icon.nil?
     all_classes << classes unless classes.nil?
 
