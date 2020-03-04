@@ -100,12 +100,12 @@
   --silver: #a3aacc;
 
   /* Tints */
-  --smoke: #dfe3f7;
-  --smoke-dark: #d6daed;
-  --smoke-darker: #cfd3e6;
-  --snow: #f7f8ff;
-  --snow-dark: #edeffa;
-  --snow-darker: #e4e7f7;
+  --smoke-light: #dfe3f7;
+  --smoke: #d6daed;
+  --smoke-dark: #cfd3e6;
+  --snow-light: #f7f8ff;
+  --snow: #edeffa;
+  --snow-dark: #e4e7f7;
 
   /* Brand colour */
   --eggplant: #300d4f;

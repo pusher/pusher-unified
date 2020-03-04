@@ -1,6 +1,6 @@
-<header class="bb b--smoke pv4">
+<header class="bb b--smoke-light pv4">
   <div class="flex items-center justify-between mw8 center">
-    <h1><a class="db link black hover-steel" href="/"><%= svg_asset("pusher-logo", class: "db") %></a></h1>
+    <h1><a class="db link black hover-steel bg-snow hover-bg-snow-light active-bg-snow-dark ph1 br-100 ba bw3 b--snow hover-b--snow-light active-b--snow-dark" href="/"><%= svg_asset("pusher-icon", class: "db") %></a></h1>
 
     <nav>
       <ul class="list pa0 ma0">
@@ -20,9 +20,10 @@
           </a>
         </li>
         <li class="dib mh4">
-          <a href="#" class="db link black fw6">
+          <%= render(ButtonComponent.new(color: 'snow', size: 'small', with_icon: true)) do %>
             Account
-          </a>
+            <%= svg_asset("caret-down", class: "ml2 silver") %>
+          <% end %>
         </li>
       </ul>
     </nav>
@@ -156,25 +157,25 @@
 
   <div class="g4x gg3 mb6">
     <div>
-      <div class="h4 white fw7 bg-smoke br3 br--top">
+      <div class="h4 white fw7 bg-smoke-light br3 br--top">
+        <code class="dib pa3 f6">--smoke-light</code>
+      </div>
+      <div class="h3 white fw7 bg-smoke">
         <code class="dib pa3 f6">--smoke</code>
       </div>
-      <div class="h3 white fw7 bg-smoke-dark">
+      <div class="h3 white fw7 bg-smoke-dark br3 br--bottom">
         <code class="dib pa3 f6">--smoke-dark</code>
-      </div>
-      <div class="h3 white fw7 bg-smoke-darker br3 br--bottom">
-        <code class="dib pa3 f6">--smoke-darker</code>
       </div>
     </div>
     <div>
-      <div class="h4 white fw7 bg-snow br3 br--top">
+      <div class="h4 white fw7 bg-snow-light br3 br--top">
+        <code class="dib pa3 f6">--snow-light</code>
+      </div>
+      <div class="h3 white fw7 bg-snow">
         <code class="dib pa3 f6">--snow</code>
       </div>
-      <div class="h3 white fw7 bg-snow-dark">
+      <div class="h3 white fw7 bg-snow-dark br3 br--bottom">
         <code class="dib pa3 f6">--snow-dark</code>
-      </div>
-      <div class="h3 white fw7 bg-snow-darker br3 br--bottom">
-        <code class="dib pa3 f6">--snow-darker</code>
       </div>
     </div>
   </div>
@@ -196,7 +197,7 @@
     <%= svg_asset("pusher-logo", class: "ma5") %>
     <h1 class="heading-level-1 ph5">Trusted by great companies to
   power their realtime&nbsp;experiences</h1>
-    <div class="pa5 mv6 bg-snow br2 g2x gg3">
+    <div class="pa5 mv6 bg-snow-light br2 g2x gg3">
       <div class="fw7 f4 tc">logo</div>
       <div class="fw7 f4 tc">logo</div>
       <div class="fw7 f4 tc">logo</div>
@@ -208,10 +209,12 @@
   <% end %>
   <div class="flex flex-column justify-between">
     <%= render(BoxComponent.new()) do %>
-      <%= render(ButtonComponent.new(type: "submit", icon: "github", color: "black", classes: "w-100")) do %>
+      <%= render(ButtonComponent.new(type: "submit", with_icon: true, color: "black", classes: "w-100")) do %>
+        <%= svg_asset("github", class: "mr3") %>
         Continue with GitHub
       <% end %>
-      <%= render(ButtonComponent.new(type: "submit", icon: "google", color: "starflower", classes: "w-100 mt5")) do %>
+      <%= render(ButtonComponent.new(type: "submit", with_icon: true, color: "starflower", classes: "w-100 mt5")) do %>
+        <%= svg_asset("google", class: "mr3") %>
         Continue with Google
       <% end %>
 

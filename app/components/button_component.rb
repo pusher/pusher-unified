@@ -9,13 +9,12 @@ class ButtonComponent < ActionView::Component::Base
     type: 'button',
     classes: '',
     size: 'large',
-    icon: nil,
+    with_icon: false,
     style: 'fill'
   )
     fill_classes = %W[sans-serif
                       f7
                       fw6
-                      white
                       tc
                       nowrap
                       bg-#{color}
@@ -32,7 +31,6 @@ class ButtonComponent < ActionView::Component::Base
     outline_classes = %w[sans-serif
                          f7
                          fw6
-                         black
                          tc
                          h2
                          nowrap
@@ -49,14 +47,15 @@ class ButtonComponent < ActionView::Component::Base
 
     base_classes = style == 'fill' ? fill_classes : outline_classes
     all_classes = base_classes
+    all_classes << %w[black] if color == 'snow' || style == 'outline'
+    all_classes << %w[white] if color != 'snow' && style == 'fill'
     all_classes << %w[pv2 ph4] if size == 'large'
     all_classes << %w[pv1 ph2] if size == 'small'
-    all_classes << %w[flex items-center justify-center] unless icon.nil?
+    all_classes << %w[flex items-center justify-center] if with_icon
     all_classes << classes unless classes.nil?
 
     @id = id unless id.nil?
     @type = type
     @classes = all_classes.join(' ')
-    @icon = icon unless icon.nil?
   end
 end
