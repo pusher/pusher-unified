@@ -1,9 +1,12 @@
 @import "./modules/pusher-tachyons.css";
-@import "./modules/_fonts.pcss";
+
+@import "./modules/_breadcrumbs.pcss";
+@import "./modules/_checkbox.pcss";
 @import "./modules/_colour-classes.pcss";
 @import "./modules/_custom-typography.pcss";
-@import "./modules/_grids.pcss";
 @import "./modules/_divider.pcss";
-@import "./modules/_placeholder.pcss";
+@import "./modules/_dropdowns.pcss";
+@import "./modules/_fonts.pcss";
+@import "./modules/_grids.pcss";
 @import "./modules/_min-height.pcss";
-@import "./modules/_checkbox.pcss";
+@import "./modules/_placeholder.pcss";

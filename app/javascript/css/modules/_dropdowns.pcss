@@ -1,0 +1,15 @@
+.dropdown-toggle-wrap {
+  &:focus .dropdown,
+  &:focus-within .dropdown,
+  &:hover .dropdown {
+    display: block;
+  }
+
+  &:focus-within .dropdown-toggle {
+    background-color: var(--snow-light);
+  }
+}
+
+.dropdown.active {
+  display: block;
+}

@@ -1,29 +1,61 @@
-<header class="bb b--smoke-light pv4">
-  <div class="flex items-center justify-between mw8 center">
-    <h1><a class="db link black hover-steel bg-snow hover-bg-snow-light active-bg-snow-dark ph1 br-100 ba bw3 b--snow hover-b--snow-light active-b--snow-dark" href="/"><%= svg_asset("pusher-icon", class: "db") %></a></h1>
+<header class="bb b--smoke-light pv4 ph5">
+  <o class="flex items-center justify-between center mw9">
+    <ol class="list ma0 pa0 flex items-center
+    breadcrumbs">
+      <li class="dib">
+        <a class="db link black hover-steel bg-snow hover-bg-snow-light active-bg-snow-dark ph1 br-100 ba bw3 b--snow hover-b--snow-light active-b--snow-dark" href="/"><%= svg_asset("pusher-icon", class: "db") %></a>
+      </li>
+      <li class="dib">
+        <%= render(ButtonComponent.new(color: 'snow', size: 'small')) do %>
+          Channels
+        <% end %>
+      </li>
+      <li class="dib fw6" aria-current="page">
+        Howling kettle spade
+      </li>
+    </ol>
 
     <nav>
       <ul class="list pa0 ma0">
-        <li class="dib mh4">
+        <li class="dib ml5">
           <%= render(ButtonComponent.new(style: "outline", size: 'small')) do %>
             Feedback
           <% end %>
         </li>
-        <li class="dib mh4">
-          <a href="#" class="db link black fw6">
+        <li class="dib ml5">
+          <a href="#" class="db link black hover-slate fw6">
             Support
           </a>
         </li>
-        <li class="dib mh4">
-          <a href="#" class="db link black fw6">
+        <li class="dib ml5">
+          <a href="#" class="db link black hover-slate fw6">
            Docs
           </a>
         </li>
-        <li class="dib mh4">
-          <%= render(ButtonComponent.new(color: 'snow', size: 'small', with_icon: true)) do %>
+        <li class="dib ml5 relative dropdown-toggle-wrap">
+          <%= render(ButtonComponent.new(color: 'snow', size: 'small', with_icon: true, classes: ' dropdown-toggle')) do %>
             Account
             <%= svg_asset("caret-down", class: "ml2 silver") %>
           <% end %>
+          <div class="dropdown dn pt3 absolute right-0">
+            <ul id="account-menu" class="list pa0 ma0 br2 ba b--smoke-light bg-white shadow-2" aria-expanded="true">
+              <li>
+                <a href="#" class="db link black hover-bg-snow-light pv2 pl4 pr6">
+                  Account
+                </a>
+              </li>
+              <li>
+                <a href="#" class="db link black hover-bg-snow-light pv2 pl4 pr6">
+                  Billing
+                </a>
+              </li>
+              <li>
+                <a href="#" class="db link black hover-bg-snow-light pv2 pl4 pr6">
+                  Sign out
+                </a>
+              </li>
+            </ul>
+          </div>
         </li>
       </ul>
     </nav>
