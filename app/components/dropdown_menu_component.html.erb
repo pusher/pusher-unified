@@ -1,0 +1,24 @@
+<<%= @wrapper_element %> class="<%= @wrapper_classes %> relative dropdown-toggle-wrap">
+  <%= render(ButtonComponent.new(
+      color: "snow",
+      size:  @size,
+      with_icon: true,
+      classes: "dropdown-toggle",
+      attributes: {
+        "aria-controls": @id
+      })) do %>
+     <%= @label %>
+    <%= svg_asset("caret-down", class: "ml2 silver") %>
+  <% end %>
+  <div class="dropdown dn pt3 absolute right-0">
+    <ul id="<%= @id %>" class="list pa0 ma0 br2 ba b--smoke-light bg-white shadow-2" aria-expanded="false">
+      <% @children.each do |child| %>
+        <li>
+          <a href="<%= child[:href] %>" class="db link black hover-bg-snow-light pv2 pl4 pr6">
+            <%= child[:label] %>
+          </a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</<%= @wrapper_element %>>

@@ -30,6 +30,13 @@ module.exports.start = () => {
             "b--snow-dark"
           );
         });
+
+        toggle.addEventListener("mouseover", function(e) {
+          dropdown.setAttribute("aria-expanded", "true");
+        });
+        toggle.addEventListener("mouseout", function(e) {
+          dropdown.setAttribute("aria-expanded", "false");
+        });
       });
     }
   });

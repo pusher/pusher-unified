@@ -1,5 +1,5 @@
 <header class="bb b--smoke-light pv4 ph5">
-  <o class="flex items-center justify-between center mw9">
+  <div class="flex items-center justify-between center mw9">
     <ol class="list ma0 pa0 flex items-center
     breadcrumbs">
       <li class="dib">
@@ -32,31 +32,25 @@
            Docs
           </a>
         </li>
-        <li class="dib ml5 relative dropdown-toggle-wrap">
-          <%= render(ButtonComponent.new(color: 'snow', size: 'small', with_icon: true, classes: ' dropdown-toggle')) do %>
-            Account
-            <%= svg_asset("caret-down", class: "ml2 silver") %>
-          <% end %>
-          <div class="dropdown dn pt3 absolute right-0">
-            <ul id="account-menu" class="list pa0 ma0 br2 ba b--smoke-light bg-white shadow-2" aria-expanded="true">
-              <li>
-                <a href="#" class="db link black hover-bg-snow-light pv2 pl4 pr6">
-                  Account
-                </a>
-              </li>
-              <li>
-                <a href="#" class="db link black hover-bg-snow-light pv2 pl4 pr6">
-                  Billing
-                </a>
-              </li>
-              <li>
-                <a href="#" class="db link black hover-bg-snow-light pv2 pl4 pr6">
-                  Sign out
-                </a>
-              </li>
-            </ul>
-          </div>
-        </li>
+        <%= render(DropdownMenuComponent.new(
+          label: "Account",
+          wrapper_element: "li",
+          wrapper_classes: "dib ml5",
+          children: [
+            {
+              label: "Account",
+              href: "#account"
+            },
+            {
+              label: "Billing",
+              href: "#billing"
+            },
+            {
+              label: "Sign out",
+              href: "#sign-out"
+            }
+          ]
+        )) %>
       </ul>
     </nav>
   </div>
