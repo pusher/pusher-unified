@@ -2,6 +2,9 @@
   <% if @id %>id="<%= @id %>"<% end %>
     class="<%= @classes %>"
     type="<%= @type %>"
+    <% @attributes.each do |key, value| %>
+      <%= key %>="<%= value %>"
+    <% end %>
   >
   <%= content %>
 </button>

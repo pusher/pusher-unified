@@ -10,7 +10,8 @@ class ButtonComponent < ActionView::Component::Base
     classes: '',
     size: 'large',
     with_icon: false,
-    style: 'fill'
+    style: 'fill',
+    attributes: {}
   )
     fill_classes = %W[sans-serif
                       f7
@@ -57,5 +58,6 @@ class ButtonComponent < ActionView::Component::Base
     @id = id unless id.nil?
     @type = type
     @classes = all_classes.join(' ')
+    @attributes = attributes unless attributes.nil?
   end
 end
