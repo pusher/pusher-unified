@@ -18,6 +18,10 @@ module.exports.start = () => {
 
         toggle.addEventListener("click", e => {
           dropdown.classList.toggle("active");
+          dropdown.setAttribute(
+            "aria-expanded",
+            dropdown.classList.contains("active")
+          );
           toggleCSSclasses(
             e.target,
             "hover-bg-snow-dark",
