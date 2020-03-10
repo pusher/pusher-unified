@@ -1,10 +1,14 @@
-require "test_helper"
+# frozen_string_literal: true
+
+require 'test_helper'
 
 class InputErrorLabelComponentTest < ActionView::Component::TestCase
-  test "component renders something useful" do
-    # assert_equal(
-    #   %(<span title="my title">Hello, components!</span>),
-    #   render_inline(InputErrorLabelComponent, attr: "value") { "Hello, components!" }.css("span").to_html
-    # )
+  basic_error_label = %(<p class="f7 fw6 radish mb2" id="error-4738">This field is required</p>)
+
+  test 'Error label should render as expected' do
+    assert_equal(
+      basic_error_label,
+      render_inline(InputErrorLabelComponent.new(id: 'error-4738', label: 'This field is required')).css('p').to_html
+    )
   end
 end
