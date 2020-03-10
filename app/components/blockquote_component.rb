@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 class BlockquoteComponent < ActionView::Component::Base
-  def initialize(cite_name:, cite_role:)
+  validates :content, presence: true
+  def initialize(cite_name: nil, cite_role: nil)
     @cite_name = cite_name
     @cite_role = cite_role
   end
