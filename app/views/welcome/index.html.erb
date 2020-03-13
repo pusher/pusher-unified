@@ -143,7 +143,7 @@
   <form class>
     <%= render(SwitchComponent.new(name: 'period', left_label: 'Today', right_label: 'Live')) %>
   </form>
-  <div class="w-100 g2x gg2">
+  <div class="w-100 g2x-ns gg2">
     <%= render(UsageLineComponent.new(title: 'Concurrent connections today', usage: 67636, limit: 100000)) %>
     <%= render(UsageLineComponent.new(title: 'Messages sent today', usage: 750636, limit: 5000000)) %>
   </div>
