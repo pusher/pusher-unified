@@ -15,12 +15,6 @@
     margin-right: var(--spacing-extra-small);
   }
 
-  &:checked + &-label {
-    background-color: var(--white);
-    border-color: var(--white);
-    box-shadow: var(--box-shadow-3);
-  }
-
   &:hover + &-label {
     background-color: var(--snow-dark);
     border-color: var(--snow-dark);
@@ -33,5 +27,11 @@
 
   &:active + &-label {
     background-color: var(--snow-dark);
+  }
+
+  &:checked + &-label {
+    background-color: var(--white);
+    border-color: var(--white);
+    box-shadow: var(--box-shadow-3);
   }
 }
