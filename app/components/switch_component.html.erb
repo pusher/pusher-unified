@@ -1,0 +1,21 @@
+<div class="bg-snow-light br4 pa1 dib">
+  <input 
+    id="<%= @left_id %>"
+    name="<%= @name %>"
+    type="radio"
+    class="radio-switch clip"
+    <%= 'checked' if @checked == 'left' %> />
+  <label for="<%= @left_id %>" class="radio-switch-label">
+    <%= @left_label %>
+  </label>
+
+  <input
+    id="<%= @right_id %>"
+    name="<%= @name %>"
+    type="radio"
+    class="radio-switch clip"
+    <%= 'checked' if @checked == 'right' %> />
+  <label for="<%= @right_id %>" class="radio-switch-label">
+    <%= @right_label %>
+  </label>
+</div>

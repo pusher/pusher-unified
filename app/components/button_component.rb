@@ -28,7 +28,8 @@ class ButtonComponent < ActionView::Component::Base
                       b--#{color}
                       focus-b--#{color}-light
                       hover-b--#{color}-light
-                      active-b--#{color}-dark]
+                      active-b--#{color}-dark
+                      pointer]
     outline_classes = %w[sans-serif
                          f7
                          fw6
@@ -44,7 +45,8 @@ class ButtonComponent < ActionView::Component::Base
                          b--smoke
                          focus-b--starflower-light
                          hover-b--smoke-light
-                         active-b--smoke-dark]
+                         active-b--smoke-dark
+                         pointer]
 
     base_classes = style == 'fill' ? fill_classes : outline_classes
     all_classes = base_classes

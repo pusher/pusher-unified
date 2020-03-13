@@ -60,14 +60,14 @@
   --border-radius-none: 0;
   --border-radius-1: 0.125rem;
   --border-radius-2: 0.25rem;
-  --border-radius-3: 0.5rem;
-  --border-radius-4: 1rem;
+  --border-radius-3: 0.375rem;
+  --border-radius-4: 0.5rem;
   --border-radius-circle: 100%;
   --border-radius-pill: 9999px;
 
   --box-shadow-1: 0px 0px 20px rgba(41, 44, 51, 0.09);
   --box-shadow-2: 0px 5px 20px rgba(207, 211, 230, 0.333);
-  --box-shadow-3: 2px 2px 4px rgba(41, 44, 51, 0.09);
+  --box-shadow-3: 0px 1px 2px rgba(38, 45, 77, 0.1);
   --box-shadow-4: 2px 2px 8px rgba(41, 44, 51, 0.09);
   --box-shadow-5: 4px 4px 8px rgba(41, 44, 51, 0.09);
 
@@ -107,8 +107,11 @@
   --snow: #edeffa;
   --snow-dark: #e4e7f7;
 
-  /* Brand colour */
+  /* Brand colours */
   --eggplant: #300d4f;
+  --channels: #6a52ff;
+  --chatkit: #ff8473;
+  --beams: #2ae9aa;
 
   /* Primary action */
   --dragonfruit-light: #db07eb;
