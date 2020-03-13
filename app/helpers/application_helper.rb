@@ -19,4 +19,12 @@ module ApplicationHelper
 
     doc.to_html.html_safe
   end
+
+  def format_big_number(number)
+    if number > 999_999
+      number_to_human(number, delimiter: ',')
+    else
+      number_with_delimiter(number, delimiter: ',')
+    end
+  end
 end

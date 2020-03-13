@@ -1,0 +1,13 @@
+<dl class="flex flex-row items-center justify-between flex-wrap">
+  <dt class="heading-level-3 w-100 usage-line" data-percentage="<%= @percentage %>%">
+    <%= @title %>
+    <div class="usage-line-bar"></div>
+    <div class="usage-line-amount" style="width: <%= @percentage %>%"></div>
+  </dt>
+  <dd class="ma0">
+    <strong><%= @usage %></strong> <span class="slate">of <%= @limit %></span>
+  </dd>
+  <dd class="ma0">
+    <strong><%= @percentage %>%</strong> <span class="slate">daily limit</span>
+  </dd>
+</dl>
