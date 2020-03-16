@@ -9,6 +9,7 @@ breadcrumbs">
     <%= render(DropdownMenuComponent.new(
       label: @product,
       wrapper_element: "li",
+      show_caret: false,
       children: @all_products
     )) %>
   <% end %>

@@ -9,7 +9,9 @@
         "aria-controls": @id
       })) do %>
      <%= @label %>
-    <%= svg_asset("caret-down", class: "ml2 silver") %>
+     <% if @show_caret %>
+      <%= svg_asset("caret-down", class: "ml2 silver") %>
+     <% end %>
   <% end %>
   </div>
   <div class="dropdown dn pt3 absolute right-0 z-1">
