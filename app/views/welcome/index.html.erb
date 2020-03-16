@@ -141,7 +141,11 @@
 <div class="pv4 ph5 flex items-center flex-wrap justify-between">
   <h2 class="mt6 heading-level-2">Overall usage</h3>
   <form class>
-    <%= render(SwitchComponent.new(name: 'period', left_label: 'Today', right_label: 'Live')) %>
+    <%= render(SwitchComponent.new(name: 'period',
+                switches: [
+                {label: 'Today', checked: true},
+                {label: 'Yesterday'},
+                {label: 'Live'}])) %>
   </form>
   <div class="w-100 g2x-ns gg2">
     <%= render(UsageLineComponent.new(title: 'Concurrent connections today', usage: 67636, limit: 100000)) %>

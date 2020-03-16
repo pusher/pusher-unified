@@ -1,21 +1,14 @@
 <div class="bg-snow-light br4 pa1 dib">
-  <input 
-    id="<%= @left_id %>"
-    name="<%= @name %>"
-    type="radio"
-    class="radio-switch clip"
-    <%= 'checked' if @checked == 'left' %> />
-  <label for="<%= @left_id %>" class="radio-switch-label">
-    <%= @left_label %>
-  </label>
-
-  <input
-    id="<%= @right_id %>"
-    name="<%= @name %>"
-    type="radio"
-    class="radio-switch clip"
-    <%= 'checked' if @checked == 'right' %> />
-  <label for="<%= @right_id %>" class="radio-switch-label">
-    <%= @right_label %>
-  </label>
+  <% @switches.each do |switch|
+    id = "#{@name}-#{SecureRandom.hex(4)}"%>
+    <input
+      id="<%= id %>"
+      name="<%= @name %>"
+      type="radio"
+      class="radio-switch clip"
+      <%= 'checked' if switch[:checked]  %> />
+    <label for="<%= id %>" class="radio-switch-label">
+      <%= switch[:label] %>
+    </label>
+  <% end %>
 </div>
