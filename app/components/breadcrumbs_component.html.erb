@@ -1,0 +1,28 @@
+<ol class="list ma0 pa0 flex items-center
+breadcrumbs">
+  <% if @logo %>
+    <li>
+      <a class="db link black hover-steel bg-snow hover-bg-snow-light active-bg-snow-dark ph1 br-100 ba bw3 b--snow hover-b--snow-light active-b--snow-dark" href="/"><%= svg_asset("pusher-icon", class: "db") %></a>
+    </li>
+  <% end %>
+  <% if @product %>
+    <%= render(DropdownMenuComponent.new(
+      label: @product,
+      wrapper_element: "li",
+      children: @all_products
+    )) %>
+  <% end %>
+  <% @links.each_with_index do |link, index| %>
+    <li class="fw6"
+    <%= "aria-current=\"page\"" if (index + 1) == @links.length %>
+    >
+      <% if link[:href] %>
+        <a class="link black hover-underline" href="<%= link[:href] %>">
+      <% end %>
+        <%= link[:label] %>
+      <% if link[:href] %>
+        </a>
+      <% end %>
+    </li>
+  <% end %>
+</ol>

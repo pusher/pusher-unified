@@ -1,20 +1,27 @@
 <header class="bb b--smoke-light pv4 ph5">
   <div class="flex items-center justify-between center mw9">
-    <ol class="list ma0 pa0 flex items-center
-    breadcrumbs">
-      <li class="dib">
-        <a class="db link black hover-steel bg-snow hover-bg-snow-light active-bg-snow-dark ph1 br-100 ba bw3 b--snow hover-b--snow-light active-b--snow-dark" href="/"><%= svg_asset("pusher-icon", class: "db") %></a>
-      </li>
-      <li class="dib">
-        <%= render(ButtonComponent.new(color: 'snow', size: 'small')) do %>
-          Channels
-        <% end %>
-      </li>
-      <li class="dib fw6" aria-current="page">
-        Howling kettle spade
-      </li>
-    </ol>
+    <%= render(BreadcrumbsComponent.new(links: [
+              {label: 'Home', href: '/'},
+              {label: 'Channels', href: '#'},
+              {label: 'Apps'}])) %>
+  </div>
+</header>
 
+<header class="bb b--smoke-light pv4 ph5">
+  <div class="flex items-center justify-between center mw9">
+    <%= render(BreadcrumbsComponent.new(logo: true, links: [
+              {label: 'Settings', href: '#'},
+              {label: 'Billing'}])) %>
+  </div>
+</header>
+
+<header class="bb b--smoke-light pv4 ph5">
+  <div class="flex items-center justify-between center mw9">
+    <%= render(BreadcrumbsComponent.new(logo: true,
+              product: 'channels',
+              links: [
+              {label: 'Howling kettle spade', href: '#'},
+              {label: 'Overview'}])) %>
     <nav>
       <ul class="list pa0 ma0">
         <li class="dib ml5">
