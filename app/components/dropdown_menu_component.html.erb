@@ -14,7 +14,7 @@
      <% end %>
   <% end %>
   </div>
-  <div class="dropdown dn pt3 absolute right-0 z-1">
+  <div class="dropdown dn pt3 absolute <%= @position_class %> z-1">
     <ul id="<%= @id %>" class="list pa0 ma0 br2 ba b--smoke-light bg-white shadow-2" aria-expanded="false">
       <% @children.each do |child| %>
         <li>
