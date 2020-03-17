@@ -9,6 +9,7 @@
 @import "./modules/_fonts.pcss";
 @import "./modules/_grids.pcss";
 @import "./modules/_min-height.pcss";
+@import "./modules/_modal.pcss";
 @import "./modules/_placeholder.pcss";
 @import "./modules/_radio-switch.pcss";
 @import "./modules/_usage-line.pcss";

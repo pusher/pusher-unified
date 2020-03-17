@@ -1,0 +1,26 @@
+<div id="<%= @id %>"
+  role="dialog"
+  aria-modal="true"
+  aria-hidden="true"
+  aria-labelledby="<%= @title_id %>"
+  class="fixed top-0 bottom-0 left-0 right-0 pa4 modal items-center overflow-auto">
+  <%= render(BoxComponent.new(classes: 'shadow-1 w-100 w-50-m w-third-l mw6 center z-5 bg-white br4')) do %>
+    <% if @modal_type == 'add' %>
+      <%= render(IconComponent.new(name: "plus-sign", title: @title, size: '24', classes: 'kale bg-kale-wash br-100 pa3 db center mb4')) %>
+    <% end %>
+
+    <h3 id="<%= @title_id %>" class="heading-level-3 tc mb0"><%= @title %></h2>
+
+    <%= content %>
+
+    <div class="flex justify-between mt5">
+      <%= render(ButtonComponent.new(color: "dragonfruit", type: 'submit')) do %>
+        <%= @action_text %>
+      <% end %>
+
+      <%= render(ButtonComponent.new(color: "snow", classes: 'modal-button-toggle', attributes: {'data-modal-id': @id})) do %>
+        Cancel
+      <% end %>
+    </div>
+  <% end %>
+</div>

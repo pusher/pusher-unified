@@ -415,3 +415,29 @@
     <% end %>
   </div>
 </div>
+
+<% modal_id = "modal-#{SecureRandom.hex(4)}"%>
+<div class="w5 center tc">
+  <%= render(ButtonComponent.new(color: "dragonfruit", classes: 'ma5 modal-button-toggle', attributes: {'data-modal-id': modal_id})) do %>
+    Try modal
+  <% end %>
+</div>
+<%= render(ModalComponent.new(id: modal_id, title: 'Add slack usage summary', action_text: 'Save', modal_type: 'add')) do %>
+  <p class="f7 tc">First, <a class="link underline black" href="#">configure a webhook in Slack</a>.</p>
+  <%= render(InputTextComponent.new(
+  container_classes: "mt5 mb4",
+  label: "Webhook endpoint",
+  type: "text",
+  id: "webhook_endpoint"
+)) %>
+<%= render(InputCheckboxComponent.new(
+  container_classes: "dib mr4",
+  label: "Daily",
+  id: "webhook_daily"
+)) %>
+<%= render(InputCheckboxComponent.new(
+  container_classes: "dib",
+  label: "Weekly",
+  id: "webhook_weekly"
+)) %>
+<% end %>

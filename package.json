@@ -6,6 +6,7 @@
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "4.2.2",
+    "postcss-colour-functions": "^1.5.2",
     "postcss-each": "^0.10.0",
     "postcss-nested": "^4.2.1",
     "turbolinks": "^5.2.0"

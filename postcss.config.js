@@ -3,6 +3,7 @@ module.exports = {
     require("postcss-import"),
     require("postcss-nested"),
     require("postcss-each"),
+    require("postcss-colour-functions"),
     require("postcss-flexbugs-fixes"),
     require("postcss-custom-media"),
     require("postcss-preset-env")({
