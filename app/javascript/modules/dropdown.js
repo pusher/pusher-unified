@@ -2,7 +2,7 @@ const toggleCSSclasses = (el, ...classes) =>
   classes.map(cl => el.classList.toggle(cl));
 
 module.exports.start = () => {
-  document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("turbolinks:load", () => {
     const toggleWraps = [].slice.call(
       document.querySelectorAll(".dropdown-toggle-wrap")
     );

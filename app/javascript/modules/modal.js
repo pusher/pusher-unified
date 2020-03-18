@@ -1,5 +1,5 @@
 module.exports.start = () => {
-  document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("turbolinks:load", () => {
     const modalButtons = [].slice.call(
       document.querySelectorAll(".modal-button-toggle")
     );

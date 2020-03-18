@@ -1,5 +1,5 @@
 module.exports.start = () => {
-  document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("turbolinks:load", () => {
     const menuButtons = [].slice.call(
       document.querySelectorAll(".menu-toggle")
     );
