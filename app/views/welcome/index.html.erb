@@ -22,6 +22,14 @@
               links: [
               {label: 'Howling kettle spade', href: '#'},
               {label: 'Overview'}])) %>
+</header>
+
+<header class="bb b--smoke-light pv4 ph5">
+  <div class="flex items-center justify-between center mw9">
+    <h3 class="f6 f5-l flex items-center ma0">
+      <%= render(IconComponent.new(name: 'channels-icon', title: 'Channels', size: 40, classes: 'channels mr3')) %>
+      Channels
+    </h3>
 
     <%= render(IconButtonComponent.new(icon_name: 'menu', icon_title: 'Show navigation menu', classes: 'menu-toggle dn-l')) %>
     
@@ -112,89 +120,6 @@
         )) %>
       </ul>
     </nav>
-  </div>
-</header>
-
-<header class="bb b--smoke-light pt4 ph5">
-  <div class="flex items-center justify-between center mw9">
-  <h3 class="f6 f5-l flex items-center ma0">
-    <%= render(IconComponent.new(name: 'channels-icon', title: 'Channels', size: 40, classes: 'channels mr3')) %>
-    Channels
-  </h3>
-
-    <nav>
-      <ul class="list pa0 ma0">
-        <li class="dib ml5">
-          <%= render(ButtonComponent.new(style: "outline", size: 'small')) do %>
-            Feedback
-          <% end %>
-        </li>
-        <li class="dib ml5">
-          <a href="#" class="db link black hover-slate fw6">
-            Support
-          </a>
-        </li>
-        <li class="dib ml5">
-          <a href="#" class="db link black hover-slate fw6">
-           Docs
-          </a>
-        </li>
-        <%= render(DropdownMenuComponent.new(
-          label: "Account",
-          wrapper_element: "li",
-          wrapper_classes: "dib ml5",
-          position_class: "right-0",
-          children: [
-            {
-              label: "Account",
-              href: "#account"
-            },
-            {
-              label: "Billing",
-              href: "#billing"
-            },
-            {
-              label: "Sign out",
-              href: "#sign-out"
-            }
-          ]
-        )) %>
-      </ul>
-    </nav>
-  </div>
-  <div class="flex items-center justify-between center mw9 mt6">
-    <nav>
-      <ul class="list pa0 ma0">
-        <li class="dib">
-          <a href="#" class="db link black hover-slate fw6 pb3 bb bw1 b--black hover-b--slate focus-b--slate">
-            Overview
-          </a>
-        </li>
-        <li class="dib ml5">
-          <a href="#" class="db link black hover-slate fw6 pb3 bb bw1 b--white hover-b--slate focus-b--slate">
-           Apps
-          </a>
-        </li>
-        <li class="dib ml5">
-          <a href="#" class="db link black hover-slate fw6 pb3 bb bw1 b--white hover-b--slate focus-b--slate">
-           Stats
-          </a>
-        </li>
-        <li class="dib ml5">
-          <a href="#" class="db link black hover-slate fw6 pb3 bb bw1 b--white hover-b--slate focus-b--slate">
-           Plans
-          </a>
-        </li>
-        <li class="dib ml5">
-          <a href="#" class="db link black hover-slate fw6 pb3 bb bw1 b--white hover-b--slate focus-b--slate">
-           Settings 
-          </a>
-        </li>
-      </ul>
-    </nav>
-    <%= render(ButtonComponent.new(color: "dragonfruit", type: 'submit', size: 'small', classes: 'mb2')) do %>
-      Create app
-    <% end %>
   </div>
 </header>
 
