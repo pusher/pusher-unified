@@ -8,6 +8,7 @@
 @import "./modules/_dropdowns.pcss";
 @import "./modules/_fonts.pcss";
 @import "./modules/_grids.pcss";
+@import "./modules/_menu.pcss";
 @import "./modules/_min-height.pcss";
 @import "./modules/_modal.pcss";
 @import "./modules/_placeholder.pcss";
