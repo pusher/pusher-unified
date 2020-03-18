@@ -1,6 +1,3 @@
-const toggleCSSclasses = (el, ...classes) =>
-  classes.map(cl => el.classList.toggle(cl));
-
 module.exports.start = () => {
   document.addEventListener("DOMContentLoaded", () => {
     const modalButtons = [].slice.call(
