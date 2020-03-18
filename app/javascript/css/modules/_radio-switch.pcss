@@ -7,7 +7,7 @@
     font-weight: 600;
     border-style: solid;
     border-width: 1px;
-    border-color: var(--snow-light);
+    border-color: var(--snow-dark);
     border-radius: var(--border-radius-3);
     cursor: pointer;
   }
@@ -17,7 +17,7 @@
   }
 
   &:hover + &-label {
-    background-color: var(--snow-dark);
+    background-color: var(--snow-light);
     border-color: var(--snow-dark);
   }
 
@@ -31,8 +31,9 @@
   }
 
   &:checked + &-label {
-    background-color: var(--white);
-    border-color: var(--white);
+    color: var(--white);
+    background-color: var(--steel);
+    border-color: var(--steel);
     box-shadow: var(--box-shadow-3);
   }
 }
