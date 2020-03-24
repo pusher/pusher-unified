@@ -1,0 +1,21 @@
+.switch-checkbox {
+  position: relative;
+  -webkit-appearance: none;
+  outline: none;
+  width: calc(var(--width-3) - 4px);
+  height: var(--spacing-large);
+  background-color: var(--white);
+  border: var(--border-width-2) solid var(--smoke);
+  border-radius: var(--border-radius-pill);
+  box-shadow: inset calc(-1 * var(--spacing-large) + 4px) 0 0 0 var(--smoke);
+  cursor: pointer;
+
+  &:checked {
+    box-shadow: inset calc(var(--spacing-large) - 4px) 0 0 0 var(--kale-light);
+    border-color: var(--kale-light);
+  }
+
+  &:focus {
+    outline: 2px solid var(--starflower);
+  }
+}
