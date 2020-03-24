@@ -124,39 +124,41 @@
       </ul>
     </nav>
   </div>
-  <div class="flex items-start justify-between center mw9 mt6">
-    <nav class="sit-on-line">
-      <ul class="list pa0 ma0 flex">
-        <li class="mr5">
-          <a href="#" class="db link black hover-slate pb4 bb bw1 b--black hover-b--black">
-            Overview
-          </a>
-        </li>
-        <li class="mr5">
-          <a href="#" class="db link black hover-slate pb4 bb bw1 b--transparent hover-b--black">
-           Apps
-          </a>
-        </li>
-        <li class="mr5">
-          <a href="#" class="db link black hover-slate pb4 bb bw1 b--transparent hover-b--black">
-           Stats
-          </a>
-        </li>
-        <li class="mr5">
-          <a href="#" class="db link black hover-slate pb4 bb bw1 b--transparent hover-b--black">
-           Plans
-          </a>
-        </li>
-        <li class="mr5">
-          <a href="#" class="db link black hover-slate pb4 bb bw1 b--transparent hover-b--black">
-           Settings
-          </a>
-        </li>
-      </ul>
-    </nav>
-    <%= render(ButtonComponent.new(size: 'small')) do %>
-      Create app
-    <% end %>
+  <div class="overflow-fade">
+    <div class="flex items-center justify-between center mw9 mt6 overflow-x-scroll overflow-y-hidden">
+      <nav class="sit-on-line">
+        <ul class="list pa0 ma0 flex">
+          <li class="mr5">
+            <a href="#" class="db link black hover-slate pb4 bb bw1 b--black hover-b--black">
+              Overview
+            </a>
+          </li>
+          <li class="mr5">
+            <a href="#" class="db link black hover-slate pb4 bb bw1 b--transparent hover-b--black">
+            Apps
+            </a>
+          </li>
+          <li class="mr5">
+            <a href="#" class="db link black hover-slate pb4 bb bw1 b--transparent hover-b--black">
+            Stats
+            </a>
+          </li>
+          <li class="mr5">
+            <a href="#" class="db link black hover-slate pb4 bb bw1 b--transparent hover-b--black">
+            Plans
+            </a>
+          </li>
+          <li class="mr5">
+            <a href="#" class="db link black hover-slate pb4 bb bw1 b--transparent hover-b--black">
+            Settings
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <%= render(ButtonComponent.new(size: 'small', classes: 'dn db-l')) do %>
+        Create app
+      <% end %>
+    </div>
   </div>
 </header>
 
