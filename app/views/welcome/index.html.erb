@@ -17,7 +17,7 @@
 
 <header class="bb b--smoke-light pv4 ph5">
   <div class="overflow-fade">
-    <div class="flex items-center justify-between center mw9 overflow-x-scroll">
+    <div class="flex items-center justify-between center mw9 overflow-x-scroll overflow-y-hidden">
       <%= render(BreadcrumbsComponent.new(logo: true,
                 product: 'channels',
                 links: [
@@ -179,19 +179,57 @@
     <form>
       <h3 class="heading-level-3">Email</h3>
       <dl class="br2 ba b--smoke-light">
-        <dt class="bb b--smoke-light pv2 ph3 flex items-center justify-between">
+        <dt class="bb b--smoke-light pv2 pl3 flex items-center justify-between">
           louise@pusher.com
-          <%= render(SwitchCheckboxComponent.new(name: 'on-off',
-                                                 label: 'Disable louise@pusher.com emails',
-                                                 checked: true)) %>
+          <div>
+            <%= render(SwitchCheckboxComponent.new(name: 'on-off',
+                        label: 'Disable louise@pusher.com emails',
+                        checked: true)) %>
+            <%= render(DropdownMenuComponent.new(
+              size: 'icon',
+              wrapper_element: "div",
+              wrapper_classes: "dib",
+              position_class: "left-0",
+              children: [
+                {
+                  label: "Edit",
+                  href: "#edit"
+                },
+                {
+                  label: "Delete",
+                  href: "#delete",
+                  warning: 'true'
+                }
+              ]
+            )) %>
+          </div>
         </dt>
         <dd class="pv2 ph3 ma0">Summary sent <strong>daily</strong> and <strong>weekly</strong></dd>
       </dl>
       <dl class="br2 ba b--smoke-light">
-        <dt class="bb b--smoke-light pv2 ph3 flex items-center justify-between">
+        <dt class="bb b--smoke-light pv2 pl3 flex items-center justify-between">
           jon.heslop@pusher.com
-          <%= render(SwitchCheckboxComponent.new(name: 'on-off',
-                                                 label: 'Disable jon.heslop@pusher.com emails')) %>
+          <div>
+            <%= render(SwitchCheckboxComponent.new(name: 'on-off',
+                                                  label: 'Disable jon.heslop@pusher.com emails')) %>
+            <%= render(DropdownMenuComponent.new(
+              size: 'icon',
+              wrapper_element: "div",
+              wrapper_classes: "dib",
+              position_class: "left-0",
+              children: [
+                {
+                  label: "Edit",
+                  href: "#edit"
+                },
+                {
+                  label: "Delete",
+                  href: "#delete",
+                  warning: 'true'
+                }
+              ]
+            )) %>
+          </div>
         </dt>
         <dd class="pv2 ph3 ma0">Summary sent <strong>daily</strong> and <strong>weekly</strong></dd>
       </dl>

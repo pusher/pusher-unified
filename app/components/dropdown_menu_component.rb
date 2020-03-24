@@ -2,7 +2,14 @@
 
 class DropdownMenuComponent < ActionView::Component::Base
   include ApplicationHelper
-  def initialize(label:, wrapper_element: 'div', wrapper_classes: '', size: 'small', bold: 'true', show_caret: true, position_class: '', children: {})
+  def initialize(label: '',
+                 wrapper_element: 'div',
+                 wrapper_classes: '',
+                 size: 'small',
+                 bold: 'true',
+                 show_caret: true,
+                 position_class: '',
+                 children: {})
     @label = label
     @wrapper_element = wrapper_element
     @wrapper_classes = wrapper_classes
