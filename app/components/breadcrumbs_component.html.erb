@@ -18,7 +18,7 @@ breadcrumbs">
     <%= "aria-current=\"page\"" if (index + 1) == @links.length %>
     >
       <% if link[:href] %>
-        <a class="link black hover-underline" href="<%= link[:href] %>">
+        <a class="truncate link black hover-underline" href="<%= link[:href] %>">
       <% end %>
         <%= link[:label] %>
       <% if link[:href] %>

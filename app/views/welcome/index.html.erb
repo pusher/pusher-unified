@@ -16,12 +16,15 @@
 </header>
 
 <header class="bb b--smoke-light pv4 ph5">
-  <div class="flex items-center justify-between center mw9">
-    <%= render(BreadcrumbsComponent.new(logo: true,
-              product: 'channels',
-              links: [
-              {label: 'Howling kettle spade', href: '#'},
-              {label: 'Overview'}])) %>
+  <div class="overflow-fade">
+    <div class="flex items-center justify-between center mw9 overflow-x-scroll">
+      <%= render(BreadcrumbsComponent.new(logo: true,
+                product: 'channels',
+                links: [
+                {label: 'Howling kettle spade', href: '#'},
+                {label: 'Overview'}])) %>
+    </div>
+  </div>
 </header>
 
 <header class="bb b--smoke-light pv4 ph5">

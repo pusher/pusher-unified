@@ -1,0 +1,23 @@
+.overflow-fade {
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  position: relative;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &:after {
+    content: " ";
+    position: absolute;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.1) 5%,
+      var(--white) 95%
+    );
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: var(--width-3);
+  }
+}

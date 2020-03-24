@@ -11,6 +11,7 @@
 @import "./modules/_menu.pcss";
 @import "./modules/_min-height.pcss";
 @import "./modules/_modal.pcss";
+@import "./modules/_overflow-fade.pcss";
 @import "./modules/_placeholder.pcss";
 @import "./modules/_switch.pcss";
 @import "./modules/_usage-line.pcss";
