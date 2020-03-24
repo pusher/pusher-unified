@@ -11,11 +11,11 @@ class ButtonComponent < ActionView::Component::Base
     size: 'large',
     with_icon: false,
     style: 'fill',
+    bold: true,
     attributes: {}
   )
     fill_classes = %W[sans-serif
                       f7
-                      fw6
                       tc
                       nowrap
                       bg-#{color}
@@ -32,7 +32,6 @@ class ButtonComponent < ActionView::Component::Base
                       pointer]
     outline_classes = %w[sans-serif
                          f7
-                         fw5
                          tc
                          h2
                          nowrap
@@ -55,6 +54,8 @@ class ButtonComponent < ActionView::Component::Base
     all_classes << %w[pv2 ph4] if size == 'large'
     all_classes << %w[pv1 ph2] if size == 'small'
     all_classes << %w[flex items-center justify-center] if with_icon
+    all_classes << %w[fw6] if bold
+    all_classes << %w[fw5] unless bold
     all_classes << classes unless classes.nil?
 
     @id = id unless id.nil?

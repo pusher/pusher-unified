@@ -87,7 +87,7 @@
     <nav class="dn db-l">
       <ul class="list pa0 ma0">
         <li class="dib ml5">
-          <%= render(ButtonComponent.new(style: "outline", size: 'small')) do %>
+          <%= render(ButtonComponent.new(style: "outline", size: 'small', bold: false)) do %>
             Feedback
           <% end %>
         </li>
@@ -103,6 +103,7 @@
         </li>
         <%= render(DropdownMenuComponent.new(
           label: "Account",
+          bold: false,
           wrapper_element: "li",
           wrapper_classes: "dib ml5",
           position_class: "right-0",
