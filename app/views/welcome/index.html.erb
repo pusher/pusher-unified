@@ -27,7 +27,7 @@
   </div>
 </header>
 
-<header class="bb b--smoke-light pv4 ph5">
+<header class="bb b--smoke-light pt4 ph5">
   <div class="flex items-center justify-between center mw9">
     <h3 class="f6 f5-l flex items-center ma0">
       <%= render(IconComponent.new(name: 'channels-icon', title: 'Channels', size: 40, classes: 'channels mr3')) %>
@@ -123,6 +123,40 @@
         )) %>
       </ul>
     </nav>
+  </div>
+  <div class="flex items-start justify-between center mw9 mt6">
+    <nav class="sit-on-line">
+      <ul class="list pa0 ma0 flex">
+        <li class="mr5">
+          <a href="#" class="db link black hover-slate pb4 bb bw1 b--black hover-b--black">
+            Overview
+          </a>
+        </li>
+        <li class="mr5">
+          <a href="#" class="db link black hover-slate pb4 bb bw1 b--transparent hover-b--black">
+           Apps
+          </a>
+        </li>
+        <li class="mr5">
+          <a href="#" class="db link black hover-slate pb4 bb bw1 b--transparent hover-b--black">
+           Stats
+          </a>
+        </li>
+        <li class="mr5">
+          <a href="#" class="db link black hover-slate pb4 bb bw1 b--transparent hover-b--black">
+           Plans
+          </a>
+        </li>
+        <li class="mr5">
+          <a href="#" class="db link black hover-slate pb4 bb bw1 b--transparent hover-b--black">
+           Settings
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <%= render(ButtonComponent.new(size: 'small')) do %>
+      Create app
+    <% end %>
   </div>
 </header>
 
