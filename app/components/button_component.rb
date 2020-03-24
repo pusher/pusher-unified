@@ -32,7 +32,7 @@ class ButtonComponent < ActionView::Component::Base
                       pointer]
     outline_classes = %w[sans-serif
                          f7
-                         fw6
+                         fw5
                          tc
                          h2
                          nowrap
