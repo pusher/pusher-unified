@@ -14,6 +14,7 @@
 @import "./modules/_overflow-fade.pcss";
 @import "./modules/_placeholder.pcss";
 @import "./modules/_sit-on-line.pcss";
+@import "./modules/_sticky.pcss";
 @import "./modules/_switch-checkbox.pcss";
 @import "./modules/_switch-radio.pcss";
 @import "./modules/_usage-line.pcss";
