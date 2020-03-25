@@ -1,7 +1,13 @@
 <<%= @wrapper_element %> class="<%= @wrapper_classes %> relative dropdown-toggle-wrap">
   <div class="dib">
   <% if @size == 'icon' %>
-    <%= render(IconButtonComponent.new(icon_name: 'ellipsis-vertical', icon_title: 'Actions menu')) %>
+    <%= render(IconButtonComponent.new(
+        icon_name: 'ellipsis-vertical',
+        icon_title: 'Actions menu',
+        classes: "dropdown-toggle",
+        attributes: {
+          "aria-controls": @id
+        })) %>
   <% else %>
     <%= render(ButtonComponent.new(
         color: "snow",
@@ -19,12 +25,17 @@
     <% end %>
   <% end %>
   </div>
-  <div class="dropdown dn pt3 absolute <%= @position_class %> z-1">
-    <ul id="<%= @id %>" class="list pa0 ma0 br2 ba b--smoke-light bg-white shadow-2" aria-expanded="false">
+  <div class="dropdown dn pt3 absolute <%= @position_class %> z-1"  aria-expanded="false">
+    <ul id="<%= @id %>" class="list pa0 ma0 br2 ba b--smoke-light bg-white shadow-2">
       <% @children.each do |child| %>
         <li>
           <a href="<%= child[:href] %>"
-             class="db link <%= child[:warning] ? 'radish hover-bg-radish-wash' : 'black hover-bg-snow-light' %> pv2 pl4 pr6"
+             class="db link <%= child[:warning] ? 'radish hover-bg-radish-wash' : 'black hover-bg-snow-light' %> pv2 pl4 pr6 <%= child[:classes] %>"
+             <% if child[:attributes] %>
+              <% child[:attributes].each do |key, value| %>
+                <%= key %>="<%= value %>"
+              <% end %>
+             <% end %>
           >
             <%= child[:label] %>
           </a>

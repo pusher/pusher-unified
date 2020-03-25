@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 class IconButtonComponent < ActionView::Component::Base
   include ApplicationHelper
 
-  def initialize(icon_name:, icon_title:, style: 'light', icon_classes: '', classes: '')
+  def initialize(icon_name:, icon_title:, style: 'light', icon_classes: '', classes: '', attributes: {})
     base_classes = %w[pa2
                       bn
                       focus-b--starflower-light
@@ -10,8 +12,12 @@ class IconButtonComponent < ActionView::Component::Base
                       pointer]
 
     all_classes = base_classes
-    all_classes << %w[bg-white black hover-slate focus-bg-snow] if style == 'light'
-    all_classes << %w[bg-black silver hover-smoke focus-bg-snow focus-black] if style == 'dark'
+    if style == 'light'
+      all_classes << %w[bg-white black hover-slate focus-bg-snow]
+    end
+    if style == 'dark'
+      all_classes << %w[bg-black silver hover-smoke focus-bg-snow focus-black]
+    end
     all_classes << classes unless classes.nil?
 
     base_icon_classes = %w[db]
@@ -23,5 +29,6 @@ class IconButtonComponent < ActionView::Component::Base
     @style = style
     @icon_classes = all_icon_classes.join(' ')
     @classes = all_classes.join(' ')
+    @attributes = attributes unless attributes.nil?
   end
 end
