@@ -1,0 +1,162 @@
+<header class="bg-black white pv4 ph5 relative dn db-l">
+  <div class="sticky top-1">
+    <h1 class="mv0 mr5">
+      <a href="/" class="link snow hover-white active-snow-dark">
+        <%= render(IconComponent.new(name: 'pusher-logo', title: 'Pusher', width: 120, classes: 'db')) %>
+      </a>
+    </h1>
+    <nav class="mt6">
+      <ul class="list ma0 pa0">
+        <li class="f6 mt0 mb5">
+          <a href="/" class="link snow hover-white active-snow-dark flex items-center">
+            <%= render(IconComponent.new(name: 'channels-icon', title: 'Channels', size: 32, classes: 'channels mr3 dib')) %>
+            Channels
+          </a>
+        </li>
+        <li class="f6 mt0 mb5">
+          <a href="/" class="link snow hover-white active-snow-dark flex items-center">
+            <%= render(IconComponent.new(name: 'channels-icon', title: 'Beams', size: 32, classes: 'beams mr3 dib')) %>
+            Beams
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main class="flex-grow-1">
+  <header class="bb b--smoke-light pt4 ph5">
+    <div class="flex items-center justify-between center mw9">
+      <h3 class="f6 f5-l flex items-center ma0">
+        <%= render(IconComponent.new(name: 'channels-icon', title: 'Channels', size: 40, classes: 'channels mr3')) %>
+        Channels
+      </h3>
+
+      <%= render(IconButtonComponent.new(icon_name: 'menu', icon_title: 'Show navigation menu', classes: 'menu-toggle dn-l')) %>
+      
+      <nav class="dn pv4 bg-black br4 relative" id="menu">
+        <%= render(IconButtonComponent.new(style: 'dark', icon_name: 'cancel', icon_title: 'Hide navigation menu', classes: 'menu-toggle absolute top-0 right-0 ma2 z-1')) %>
+        <ul class="list pa0 ma0">
+          <li class="pb5">
+            <a href="/" class="w-75 flex items-center relative ph4 link white hover-silver focus-black f5 fw6 menu-current-product">
+              <%= render(IconComponent.new(name: 'channels-icon', title: 'Channels', size: 40, classes: 'channels mr3')) %>
+              Channels
+            </a>
+          </li>
+          <li class="pb3 mb3">
+            <a href="/" class="w-75 flex items-center relative ph4 link white hover-silver focus-black f5 fw6">
+              <%= render(IconComponent.new(name: 'channels-icon', title: 'Channels', size: 40, classes: 'chatkit mr3')) %>
+              Chatkit
+            </a>
+          </li>
+          <li class="pb3 mb5 bb b--slate">
+            <a href="/" class="w-75 flex items-center relative ph4 link white hover-silver focus-black f5 fw6">
+              <%= render(IconComponent.new(name: 'channels-icon', title: 'Channels', size: 40, classes: 'beams mr3')) %>
+              Beams
+            </a>
+          </li>
+          <li class="pb2 mb2">
+            <a href="#" class="dib w-75 ph4 f6 link white hover-silver focus-black fw6">
+              Account settings
+            </a>
+          </li>
+          <li class="pb2 mb2">
+            <a href="#" class="dib w-75 ph4 f6 link white hover-silver focus-black fw6">
+            Billing
+            </a>
+          </li>
+          <li class="pb2 mb2">
+            <a href="#" class="dib w-75 ph4 f6 link white hover-silver focus-black fw6">
+            Support
+            </a>
+          </li>
+          <li class="pb2 mb2">
+            <a href="#" class="dib w-75 ph4 f6 link white hover-silver focus-black fw6">
+            Docs
+            </a>
+          </li>
+          <li class="ph4">
+            <%= render(ButtonComponent.new(classes: "w-100")) do %>
+              Sign out
+            <% end %>
+          </li>
+        </ul>
+      </nav>
+      <nav class="dn db-l">
+        <ul class="list pa0 ma0">
+          <li class="dib ml5">
+            <%= render(ButtonComponent.new(style: "outline", size: 'small', bold: false)) do %>
+              Feedback
+            <% end %>
+          </li>
+          <li class="dib ml5">
+            <a href="#" class="db link black hover-slate">
+              Support
+            </a>
+          </li>
+          <li class="dib ml5">
+            <a href="#" class="db link black hover-slate">
+            Docs
+            </a>
+          </li>
+          <%= render(DropdownMenuComponent.new(
+            label: "Account",
+            bold: false,
+            wrapper_element: "li",
+            wrapper_classes: "dib ml5",
+            position_class: "right-0",
+            children: [
+              {
+                label: "Account",
+                href: "#account"
+              },
+              {
+                label: "Billing",
+                href: "#billing"
+              },
+              {
+                label: "Sign out",
+                href: "#sign-out"
+              }
+            ]
+          )) %>
+        </ul>
+      </nav>
+    </div>
+    <div class="overflow-fade">
+      <div class="flex items-center justify-between center mw9 mt6">
+        <nav class="sit-on-line">
+          <ul class="list pa0 ma0 flex">
+            <li class="mr5">
+              <a href="#" class="db link black hover-slate pb4 bb bw1 b--black hover-b--black nav-active-item">
+                Overview
+              </a>
+            </li>
+            <li class="mr5">
+              <a href="#" class="db link black hover-slate pb4 bb bw1 b--transparent hover-b--black">
+              Apps
+              </a>
+            </li>
+            <li class="mr5">
+              <a href="#" class="db link black hover-slate pb4 bb bw1 b--transparent hover-b--black">
+              Stats
+              </a>
+            </li>
+            <li class="mr5">
+              <a href="#" class="db link black hover-slate pb4 bb bw1 b--transparent hover-b--black">
+              Plans
+              </a>
+            </li>
+            <li class="mr5">
+              <a href="#" class="db link black hover-slate pb4 bb bw1 b--transparent hover-b--black">
+              Settings
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <%= render(ButtonComponent.new(size: 'small', classes: 'dn db-l')) do %>
+          Create app
+        <% end %>
+      </div>
+    </div>
+  </header>
+</main>

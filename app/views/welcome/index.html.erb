@@ -1,3 +1,29 @@
+<header class="bg-black white pv4 ph5 relative dn db-l">
+  <div class="sticky top-1">
+    <h1 class="mv0 mr5">
+      <a href="/" class="link snow hover-white active-snow-dark">
+        <%= render(IconComponent.new(name: 'pusher-logo', title: 'Pusher', width: 120, classes: 'db')) %>
+      </a>
+    </h1>
+    <nav class="mt6">
+      <ul class="list ma0 pa0">
+        <li class="f6 mt0 mb5">
+          <a href="/" class="link snow hover-white active-snow-dark flex items-center">
+            <%= render(IconComponent.new(name: 'channels-icon', title: 'Channels', size: 32, classes: 'channels mr3 dib')) %>
+            Channels
+          </a>
+        </li>
+        <li class="f6 mt0 mb5">
+          <a href="/" class="link snow hover-white active-snow-dark flex items-center">
+            <%= render(IconComponent.new(name: 'channels-icon', title: 'Beams', size: 32, classes: 'beams mr3 dib')) %>
+            Beams
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main>
 <header class="bb b--smoke-light pv4 ph5">
   <div class="flex items-center justify-between center mw9">
     <%= render(BreadcrumbsComponent.new(links: [
@@ -126,7 +152,7 @@
     </nav>
   </div>
   <div class="overflow-fade">
-    <div class="flex items-center justify-between center mw9 mt6 overflow-x-scroll overflow-y-hidden">
+    <div class="flex items-center justify-between center mw9 mt6">
       <nav class="sit-on-line">
         <ul class="list pa0 ma0 flex">
           <li class="mr5">
@@ -555,3 +581,4 @@
     <% end %>
   </div>
 </div>
+</main>

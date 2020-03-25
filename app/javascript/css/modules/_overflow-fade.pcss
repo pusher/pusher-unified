@@ -7,6 +7,11 @@
     display: none;
   }
 
+  & > div {
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+
   &:after {
     content: " ";
     position: absolute;
@@ -25,5 +30,10 @@
 @media (--breakpoint-large) {
   .overflow-fade:after {
     display: none;
+  }
+
+  .overflow-fade > div {
+    overflow-x: inherit;
+    overflow-y: inherit;
   }
 }
