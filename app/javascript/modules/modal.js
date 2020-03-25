@@ -7,6 +7,7 @@ module.exports.start = () => {
     if (modalButtons.length > 0) {
       modalButtons.forEach(modalButton => {
         modalButton.addEventListener("click", e => {
+          e.preventDefault();
           const modal = document.getElementById(modalButton.dataset.modalId);
           modal.classList.toggle("active");
           document.body.classList.toggle("overflow-hidden");
@@ -14,6 +15,7 @@ module.exports.start = () => {
             "aria-hidden",
             !modal.classList.contains("active")
           );
+          modal.querySelectorAll("input, button")[0].focus();
         });
       });
     }
