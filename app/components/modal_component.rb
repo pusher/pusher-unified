@@ -11,5 +11,6 @@ class ModalComponent < ActionView::Component::Base
     @title_id = "modal-title-#{SecureRandom.hex(4)}"
     @modal_type = modal_type
     @action_text = action_text
+    @action_button_colour = modal_type == 'delete' ? 'radish' : 'dragonfruit'
   end
 end

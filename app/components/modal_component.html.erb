@@ -26,7 +26,7 @@
     <%= content %>
 
     <div class="flex justify-between mt5">
-      <%= render(ButtonComponent.new(color: "dragonfruit", type: 'submit')) do %>
+      <%= render(ButtonComponent.new(color: @action_button_colour, type: 'submit')) do %>
         <%= @action_text %>
       <% end %>
 
