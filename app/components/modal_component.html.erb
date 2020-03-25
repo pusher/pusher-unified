@@ -3,7 +3,7 @@
   aria-modal="true"
   aria-hidden="true"
   aria-labelledby="<%= @title_id %>"
-  class="fixed top-0 bottom-0 left-0 right-0 pa4 modal items-center overflow-auto">
+  class="fixed top-0 bottom-0 left-0 right-0 pa4 modal items-center overflow-auto z-1">
   <%= render(BoxComponent.new(classes: 'shadow-1 w-100 w-50-m w-third-l mw6 center z-5 bg-white br4')) do %>
     <% if @modal_type == 'add' %>
       <%= render(IconComponent.new(name: "plus-sign", title: @title, size: '24', classes: 'kale bg-kale-wash br-100 pa3 db center mb4')) %>
