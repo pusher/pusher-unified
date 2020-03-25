@@ -233,12 +233,18 @@
         </dt>
         <dd class="pv2 ph3 ma0">Summary sent <strong>daily</strong> and <strong>weekly</strong></dd>
       </dl>
+      <%= render(ButtonComponent.new(color: 'black')) do %>
+        Add email summary
+      <% end %>
     </form>
     <form>
       <h3 class="heading-level-3">Webhooks</h3>
       <div class="silver ba b--dashed bw1 b--smoke br4 pv2 ph3 mv4">
         https://url.com/webhook
       </div>
+      <%= render(ButtonComponent.new(color: 'black')) do %>
+        Add webhook summary
+      <% end %>
     </form>
   </div>
 </div>

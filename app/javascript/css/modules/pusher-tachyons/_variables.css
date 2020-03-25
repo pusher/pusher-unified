@@ -94,7 +94,9 @@
   --max-width-10: 96rem;
 
   /* Darks */
+  --black-light: var(--steel);
   --black: #262d4d;
+  --black-dark: #2b2c3c;
   --steel: #363b59;
   --slate: #596080;
   --silver: #a3aacc;
