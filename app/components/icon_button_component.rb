@@ -3,9 +3,8 @@
 class IconButtonComponent < ActionView::Component::Base
   include ApplicationHelper
 
-  def initialize(icon_name:, icon_title:, style: 'light', icon_classes: '', classes: '', attributes: {})
-    base_classes = %w[pa2
-                      bn
+  def initialize(icon_name:, icon_title:, style: 'light', size: 24, icon_classes: '', classes: '', no_padding: false, attributes: {})
+    base_classes = %w[bn
                       focus-b--starflower-light
                       hover-b--smoke-light
                       active-b--smoke-dark
@@ -18,6 +17,8 @@ class IconButtonComponent < ActionView::Component::Base
     if style == 'dark'
       all_classes << %w[bg-black silver hover-smoke focus-bg-snow focus-black]
     end
+    all_classes << 'pa0' if no_padding
+    all_classes << 'pa2' unless no_padding
     all_classes << classes unless classes.nil?
 
     base_icon_classes = %w[db]
@@ -27,6 +28,7 @@ class IconButtonComponent < ActionView::Component::Base
     @icon_name = icon_name
     @icon_title = icon_title
     @style = style
+    @size = size
     @icon_classes = all_icon_classes.join(' ')
     @classes = all_classes.join(' ')
     @attributes = attributes unless attributes.nil?

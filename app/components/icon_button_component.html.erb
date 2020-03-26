@@ -2,5 +2,5 @@
   <% @attributes.each do |key, value| %>
     <%= key %>="<%= value %>"
   <% end %>>
-  <%= render(IconComponent.new(name: @icon_name, title:  @icon_title, size: 24, classes: @icon_classes)) %>
+  <%= render(IconComponent.new(name: @icon_name, title:  @icon_title, size: @size, classes: @icon_classes)) %>
 </button>
