@@ -184,9 +184,21 @@
             {label: 'Owned by me'},
             {label: 'Shared with me', tooltip: "Usage of apps shared with you is billed to the owner of the app, not you", tooltip_width: 'w5'}])) %>
     </div>
-
-      <%= render(BoxComponent.new(dashed: true)) do %>
-        <h3 class="mt6 heading-level-2">No apps here</h3>
-      <% end %>
   </div>
+
+  <%= render(BoxComponent.new(dashed: true, classes: 'w-100 tc mv5')) do %>
+    <span class="dib br-100 bg-starflower-wash pa3 mb4-l">
+      <%= render(IconComponent.new(name: 'ghost', size: 24, classes: 'db starflower')) %>
+    </span>
+    <div class="dn db-l">
+      <h3 class="heading-level-2">You don’t have any apps right now</h3>
+      <%= render(ButtonComponent.new()) do %>
+        Create app
+      <% end %>
+    </div>
+    <div class="dn-l">
+      <h3 class="f5 ma0">No apps here</h3>
+      <p>Create one on your computer</p>
+    </div>
+  <% end %>
 </main>
