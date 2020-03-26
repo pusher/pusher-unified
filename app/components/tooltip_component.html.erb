@@ -1,5 +1,5 @@
 <div class="tooltip dib relative">
-  <%= render(IconButtonComponent.new(icon_name: 'info', icon_title: 'Info tooltip', classes: @classes)) %>
+  <%= render(IconComponent.new(name: 'info', title: 'Info tooltip', size: 16, classes: @classes)) %>
   <div id="<%= @id %>"
     class="tooltip--content absolute z-1 bg-black snow pa3 br2 f8 <%= @width %> <%= @position %>">
     <%= widont(content) %>
