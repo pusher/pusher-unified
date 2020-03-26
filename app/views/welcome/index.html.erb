@@ -270,9 +270,9 @@
     </form>
     <form>
       <h3 class="heading-level-3">Webhooks</h3>
-      <div class="silver ba b--dashed bw1 b--smoke br4 pv2 ph3 mv4">
+      <%= render(BoxComponent.new(padding: 'small', dashed: true, classes: 'silver mv4')) do %>
         https://url.com/webhook
-      </div>
+      <% end %>
       <%= render(ButtonComponent.new(color: 'black', classes: 'modal-button-toggle', attributes: {'data-modal-id': add_modal_id})) do %>
         Add webhook summary
       <% end %>
