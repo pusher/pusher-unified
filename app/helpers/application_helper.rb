@@ -15,6 +15,8 @@ module ApplicationHelper
     if options[:title].present?
       svg['aria-labelledby'] = svg_id
       svg.add_child("<title id=\"#{svg_id}\">#{options[:title]}</title>")
+    else
+      svg['aria-hidden'] = 'true'
     end
 
     doc.to_html.html_safe
