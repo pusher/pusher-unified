@@ -166,13 +166,13 @@
     <%= render(UsageLineComponent.new(title: 'Concurrent connections today', usage: 67636, limit: 100000)) %>
     <%= render(UsageLineComponent.new(title: 'Messages sent today', usage: 750636, limit: 5000000)) %>
 
-    <h3 class="mt6 heading-level-2 flex items-center">Tooltip below
-        <%= render(TooltipComponent.new(classes: 'silver', width: 'w5')) do %>
+    <h3 class="mt6 heading-level-2 flex items-center" aria-describedby="tooltip-below">Tooltip below
+        <%= render(TooltipComponent.new(id: 'tooltip-below', classes: 'silver', width: 'w5')) do %>
         Usage of apps shared with you is billed to the owner of the app, not you
       <% end %>
     </h3>
-    <h3 class="mt6 heading-level-2 flex items-center">Tooltip above
-      <%= render(TooltipComponent.new(classes: 'silver', width: 'w5', position: 'above')) do %>
+    <h3 class="mt6 heading-level-2 flex items-center" aria-describedby="tooltip-above">Tooltip above
+      <%= render(TooltipComponent.new(id: 'tooltip-above', classes: 'silver', width: 'w5', position: 'above')) do %>
         Usage of apps shared with you is billed to the owner of the app, not you
       <% end %>
     </h3>
