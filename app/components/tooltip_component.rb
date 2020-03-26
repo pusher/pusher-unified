@@ -5,8 +5,12 @@ class TooltipComponent < ActionView::Component::Base
   validates :content, presence: true
 
   def initialize(id:, classes: '', width: '', position: 'below')
+    base_classes = %w[db mv2 ml3]
+    all_classes = base_classes
+    all_classes << classes unless classes.nil?
+
     @id = id
-    @classes = classes
+    @classes = all_classes.join(' ')
     @width = width
     @position = position unless position == 'below'
   end

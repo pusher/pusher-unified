@@ -166,15 +166,23 @@
     <%= render(UsageLineComponent.new(title: 'Concurrent connections today', usage: 67636, limit: 100000)) %>
     <%= render(UsageLineComponent.new(title: 'Messages sent today', usage: 750636, limit: 5000000)) %>
 
-    <h3 class="mt6 heading-level-2 flex items-center" aria-describedby="tooltip-below">Tooltip below
+    <h3 class="mt6 heading-level-2 flex items-center" aria-describedby="tooltip-below">Tooltip below (default)
         <%= render(TooltipComponent.new(id: 'tooltip-below', classes: 'silver', width: 'w5')) do %>
-        Usage of apps shared with you is billed to the owner of the app, not you
+        A long tooltip that needs to be set a litter wider.
       <% end %>
     </h3>
     <h3 class="mt6 heading-level-2 flex items-center" aria-describedby="tooltip-above">Tooltip above
-      <%= render(TooltipComponent.new(id: 'tooltip-above', classes: 'silver', width: 'w5', position: 'above')) do %>
-        Usage of apps shared with you is billed to the owner of the app, not you
+      <%= render(TooltipComponent.new(id: 'tooltip-above', classes: 'silver', position: 'above')) do %>
+        This one is shorter
       <% end %>
     </h3>
+    <h3 class="mt6 heading-level-2 flex items-center" aria-describedby="tooltip-switch">Tooltip in a switch</h3>
+    <div class="mt6">
+      <%= render(SwitchRadioComponent.new(name: 'period',
+            switches: [
+            {label: 'All apps', checked: true},
+            {label: 'Owned by me'},
+            {label: 'Shared with me', tooltip: "Usage of apps shared with you is billed to the owner of the app, not you", tooltip_width: 'w5'}])) %>
+    </div>
   </div>
 </main>

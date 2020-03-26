@@ -1,14 +1,21 @@
-<div class="bg-snow-dark br-pill pa1 dib">
+<div class="bg-snow-dark br-pill pa1 inline-flex items-center">
   <% @switches.each do |switch|
-    id = "#{@name}-#{SecureRandom.hex(4)}"%>
+    id = "#{@name}-#{SecureRandom.hex(4)}"
+    tooltip_id = "#{@name}-#{SecureRandom.hex(4)}"%>
     <input
       id="<%= id %>"
       name="<%= @name %>"
       type="radio"
       class="switch-radio clip"
       <%= 'checked' if switch[:checked]  %> />
-    <label for="<%= id %>" class="switch-radio-label">
+    <label for="<%= id %>" class="switch-radio-label"
+      aria-describedby="<%= tooltip_id %>">
       <%= switch[:label] %>
     </label>
+    <% if switch[:tooltip] %>
+      <%= render(TooltipComponent.new(id: tooltip_id, classes: 'silver mr3', width: switch[:tooltip_width] )) do %>
+        <%= switch[:tooltip] %>
+      <% end %>
+    <% end %>
   <% end %>
 </div>
