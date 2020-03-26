@@ -176,7 +176,7 @@
         This one is shorter
       <% end %>
     </h3>
-    <h3 class="mt6 heading-level-2 flex items-center" aria-describedby="tooltip-switch">Tooltip in a switch</h3>
+    <h3 class="mt6 heading-level-2">Tooltip in a switch</h3>
     <div class="mt6">
       <%= render(SwitchRadioComponent.new(name: 'period',
             switches: [
@@ -184,5 +184,9 @@
             {label: 'Owned by me'},
             {label: 'Shared with me', tooltip: "Usage of apps shared with you is billed to the owner of the app, not you", tooltip_width: 'w5'}])) %>
     </div>
+
+      <%= render(BoxComponent.new(dashed: true)) do %>
+        <h3 class="mt6 heading-level-2">No apps here</h3>
+      <% end %>
   </div>
 </main>
