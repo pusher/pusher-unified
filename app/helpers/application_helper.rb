@@ -27,4 +27,13 @@ module ApplicationHelper
       number_with_delimiter(number, delimiter: ',')
     end
   end
+
+  # Widon't 2.1 (the update based on Matthew Mullenweg's regular expression)
+  # http://www.shauninman.com/archive/2007/01/03/widont_2_1_wordpress_plugin
+  #
+  # @param [String] text the text to apply Widon't to
+  # @return [String] a copy of the text with Widon't applied
+  def widont(text)
+    text.gsub(/([^\s])\s+([^\s]+)\s*$/, '\1&nbsp;\2').html_safe
+  end
 end
