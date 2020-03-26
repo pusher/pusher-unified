@@ -1,0 +1,19 @@
+.tooltip {
+  &--content {
+    display: none;
+  }
+
+  &:focus-within > .tooltip--content,
+  &:focus > .tooltip--content,
+  &:hover > .tooltip--content {
+    display: block;
+  }
+
+  &--content {
+    transform: translate(calc(-50% + var(--spacing-large)), 0);
+  }
+
+  &--content.above {
+    transform: translate(calc(-50% + var(--spacing-large)), calc(-100% - 38px));
+  }
+}
