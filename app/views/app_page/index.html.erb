@@ -23,7 +23,7 @@
     </nav>
   </div>
 </header>
-<main class="flex-grow-1">
+<main class="flex-grow-1 mw8 center">
   <header class="bb b--smoke-light pt4 ph5">
     <div class="flex items-center justify-between center mw9">
       <h3 class="f6 f5-l flex items-center ma0">
@@ -153,4 +153,16 @@
       </div>
     </div>
   </header>
+  <div class="pv4 ph5 flex items-center flex-wrap justify-between">
+  <h3 class="mt6 heading-level-2">Overall usage</h3>
+  <form class>
+    <%= render(SwitchRadioComponent.new(name: 'period',
+                switches: [
+                {label: 'Today', checked: true},
+                {label: 'Live'}])) %>
+  </form>
+  <div class="w-100 g2x-ns gg2">
+    <%= render(UsageLineComponent.new(title: 'Concurrent connections today', usage: 67636, limit: 100000)) %>
+    <%= render(UsageLineComponent.new(title: 'Messages sent today', usage: 750636, limit: 5000000)) %>
+  </div>
 </main>
