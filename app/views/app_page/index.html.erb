@@ -23,9 +23,9 @@
     </nav>
   </div>
 </header>
-<main class="flex-grow-1 mw8 center">
-  <header class="bb b--smoke-light pt4 ph5">
-    <div class="flex items-center justify-between center mw9">
+<div class="flex-grow-1">
+  <header class="bb b--smoke-light">
+    <div class="pt4 ph5 flex items-center justify-between center mw8">
       <h3 class="f6 f5-l flex items-center ma0">
         <%= render(IconComponent.new(name: 'channels-icon', title: 'Channels', size: 40, classes: 'channels mr3')) %>
         Channels
@@ -116,7 +116,7 @@
         </ul>
       </nav>
     </div>
-    <div class="overflow-fade">
+    <div class="pt4 ph5 overflow-fade mw8 center">
       <div class="flex items-start justify-between mt6">
         <nav class="sit-on-line">
           <ul class="list pa0 ma0 flex">
@@ -153,52 +153,53 @@
       </div>
     </div>
   </header>
-  <div class="pv4 ph5 flex items-center flex-wrap justify-between">
-  <h3 class="mt6 heading-level-2">Overall usage</h3>
-  <form class>
-    <%= render(SwitchRadioComponent.new(name: 'period',
-                switches: [
-                {label: 'Today', checked: true},
-                {label: 'Live'}])) %>
-  </form>
-
-  <div class="w-100 g2x-ns gg2">
-    <%= render(UsageLineComponent.new(title: 'Concurrent connections today', usage: 67636, limit: 100000)) %>
-    <%= render(UsageLineComponent.new(title: 'Messages sent today', usage: 750636, limit: 5000000)) %>
-
-    <h3 class="mt6 heading-level-2 flex items-center" aria-describedby="tooltip-below">Tooltip below (default)
-        <%= render(TooltipComponent.new(id: 'tooltip-below', classes: 'silver', width: 'w5')) do %>
-        A long tooltip that needs to be set a litter wider.
-      <% end %>
-    </h3>
-    <h3 class="mt6 heading-level-2 flex items-center" aria-describedby="tooltip-above">Tooltip above
-      <%= render(TooltipComponent.new(id: 'tooltip-above', classes: 'silver', position: 'above')) do %>
-        This one is shorter
-      <% end %>
-    </h3>
-    <h3 class="mt6 heading-level-2">Tooltip in a switch</h3>
-    <div class="mt6">
+  <main class="pv4 ph5 flex items-center flex-wrap justify-between mw8 center">
+    <h3 class="mt6 heading-level-2">Overall usage</h3>
+    <form class>
       <%= render(SwitchRadioComponent.new(name: 'period',
-            switches: [
-            {label: 'All apps', checked: true},
-            {label: 'Owned by me'},
-            {label: 'Shared with me', tooltip: "Usage of apps shared with you is billed to the owner of the app, not you", tooltip_width: 'w5'}])) %>
-    </div>
-  </div>
+                  switches: [
+                  {label: 'Today', checked: true},
+                  {label: 'Live'}])) %>
+    </form>
 
-  <%= render(BoxComponent.new(dashed: true, classes: 'w-100 tc mv5')) do %>
-    <span class="dib br-100 bg-starflower-wash pa3 mb4-l">
-      <%= render(IconComponent.new(name: 'ghost', size: 24, classes: 'db starflower')) %>
-    </span>
-    <div class="dn db-l">
-      <h3 class="heading-level-2">You don’t have any apps right now</h3>
-      <%= render(ButtonComponent.new()) do %>
-        Create app
-      <% end %>
+    <div class="w-100 g2x-ns gg2">
+      <%= render(UsageLineComponent.new(title: 'Concurrent connections today', usage: 67636, limit: 100000)) %>
+      <%= render(UsageLineComponent.new(title: 'Messages sent today', usage: 750636, limit: 5000000)) %>
+
+      <h3 class="mt6 heading-level-2 flex items-center" aria-describedby="tooltip-below">Tooltip below (default)
+          <%= render(TooltipComponent.new(id: 'tooltip-below', classes: 'silver', width: 'w5')) do %>
+          A long tooltip that needs to be set a litter wider.
+        <% end %>
+      </h3>
+      <h3 class="mt6 heading-level-2 flex items-center" aria-describedby="tooltip-above">Tooltip above
+        <%= render(TooltipComponent.new(id: 'tooltip-above', classes: 'silver', position: 'above')) do %>
+          This one is shorter
+        <% end %>
+      </h3>
+      <h3 class="mt6 heading-level-2">Tooltip in a switch</h3>
+      <div class="mt6">
+        <%= render(SwitchRadioComponent.new(name: 'period',
+              switches: [
+              {label: 'All apps', checked: true},
+              {label: 'Owned by me'},
+              {label: 'Shared with me', tooltip: "Usage of apps shared with you is billed to the owner of the app, not you", tooltip_width: 'w5'}])) %>
+      </div>
     </div>
-    <div class="dn-l">
-      <h3 class="f5 ma0">No apps here</h3>
-      <p>Create one on your computer</p>
-    </div>
-  <% end %>
-</main>
+
+    <%= render(BoxComponent.new(dashed: true, classes: 'w-100 tc mv5')) do %>
+      <span class="dib br-100 bg-starflower-wash pa3 mb4-l">
+        <%= render(IconComponent.new(name: 'ghost', size: 24, classes: 'db starflower')) %>
+      </span>
+      <div class="dn db-l">
+        <h3 class="heading-level-2">You don’t have any apps right now</h3>
+        <%= render(ButtonComponent.new()) do %>
+          Create app
+        <% end %>
+      </div>
+      <div class="dn-l">
+        <h3 class="f5 ma0">No apps here</h3>
+        <p>Create one on your computer</p>
+      </div>
+    <% end %>
+  </main>
+</div>
