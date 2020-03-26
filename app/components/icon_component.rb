@@ -2,7 +2,7 @@
 
 class IconComponent < ActionView::Component::Base
   include ApplicationHelper
-  def initialize(name:, title:, size: 16, classes: '', width: nil, height: 'auto')
+  def initialize(name:, title: '', size: 16, classes: '', width: nil, height: 'auto')
     @name = name
     @title = title
     @size = size
