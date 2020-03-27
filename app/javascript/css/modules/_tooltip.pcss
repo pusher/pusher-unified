@@ -29,12 +29,15 @@
 
   &--content {
     transform: translate(
-      calc(-50% + var(--spacing-large)),
+      calc(-50% + var(--spacing-medium) * 1.25),
       var(--spacing-extra-small)
     );
   }
 
   &--content.above {
-    transform: translate(calc(-50% + var(--spacing-large)), calc(-100% - 30px));
+    transform: translate(
+      calc(-50% + var(--spacing-medium) * 1.25),
+      calc(-100% - 30px)
+    );
   }
 }
