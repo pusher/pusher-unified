@@ -11,11 +11,11 @@
     <label for="<%= id %>" class="switch-radio-label"
       aria-describedby="<%= tooltip_id %>">
       <%= switch[:label] %>
-    </label>
-    <% if switch[:tooltip] %>
-      <%= render(TooltipComponent.new(id: tooltip_id, classes: 'silver mr3', width: switch[:tooltip_width] )) do %>
-        <%= switch[:tooltip] %>
+      <% if switch[:tooltip] %>
+        <%= render(TooltipComponent.new(id: tooltip_id, classes: 'silver mv0-ns', width: switch[:tooltip_width] )) do %>
+          <%= switch[:tooltip] %>
+        <% end %>
       <% end %>
-    <% end %>
+    </label>
   <% end %>
 </div>

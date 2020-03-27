@@ -1,6 +1,24 @@
 .tooltip {
   &--content {
     display: none;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: calc(-1 * var(--spacing-extra-small));
+      right: 0;
+      left: 0;
+      padding-top: var(--spacing-extra-small);
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: calc(-1 * var(--spacing-extra-small));
+      right: 0;
+      left: 0;
+      padding-top: var(--spacing-extra-small);
+    }
   }
 
   &:focus-within > .tooltip--content,
@@ -10,7 +28,10 @@
   }
 
   &--content {
-    transform: translate(calc(-50% + var(--spacing-large)), 0);
+    transform: translate(
+      calc(-50% + var(--spacing-large)),
+      var(--spacing-extra-small)
+    );
   }
 
   &--content.above {
